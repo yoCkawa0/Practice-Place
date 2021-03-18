@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Todo List</h1>
+
+        <!-- tab area -->
+        <div class="tab">
+            <button class="tab-list">inbox</button>
+            <button>done</button>
+            <select id="sort-menu">
+                <option value="created-desc">登録日↓</option>
+                <option value="created-asc">登録日↑</option>
+                <option value="priority-desc">優先度↓</option>
+                <option value="priority-asc">優先度↑</option>
+            </select>
+        </div>
+
+        <div class="table">
+            <table id="todolist">
+                <thead>
+                    <tr>
+                        <th>edit-button</th>
+                        <th>todo-name</th>
+                        <th>Registration date</th>
+                        <th>priority</th>
+                        <th>done-button</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- form -->
+        <form action="POST">
+            <div class="input-text">
+                <label for="input-text">TODO</label>
+                <input type="text" id="input-text" placeholder="do my homework">
+            </div>
+            <div class="submit">
+                <button type="submit">send it!</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
