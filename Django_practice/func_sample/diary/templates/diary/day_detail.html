@@ -1,0 +1,30 @@
+{% extends 'diary/base.html' %}
+
+{% block content%}
+{% comment %}
+<form action="" method="POST">
+{{form.as_p}}
+<button type="submit">Send</button>
+{% endcomment %}
+
+
+    <table class="table">
+        <tr>
+            {% comment %} <th>{{form.title.label}}</th> {% endcomment %}
+            <th>title</th>
+            <td>{{day.title}}</td>
+        </tr>
+        <tr>
+            {% comment %} <th>{{form.text.label}}</th> {% endcomment %}
+            <th>text</th>
+            <td>{{day.text | linebreaksbr | urlize }}</td>
+        </tr>
+        <tr>
+            {% comment %} <th>{{form.date.label}}</th> {% endcomment %}
+            <th>date</th>
+            <td>{{day.date}}</td>
+        </tr>
+    </table>
+
+{% endblock%}
+

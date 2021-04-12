@@ -1,0 +1,33 @@
+{% extends 'employ/base.html' %}
+
+{% block content %}
+<form action="" method="GET">
+{{form}}
+<button type='submit'>Search</button>
+</form>
+<table class="table table-bordered mt-4">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Lastname</th>
+        <th>Firstname</th>
+        <th>Mail</th>
+        <th>Department</th>
+        <th>Club</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for employ in employ_list %}
+        <tr>
+            <td>{{employ.pk}}</td>
+            <td>{{employ.last_name}}</td>
+            <td>{{employ.first_name}}</td>
+            <td>{{employ.email}}</td>
+            <td>{{employ.department}}</td>
+            <td>{% for club in employ.club.all %}{{club}} {% endfor %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% include 'employ/page5.html' %}
+{% endblock content %}
