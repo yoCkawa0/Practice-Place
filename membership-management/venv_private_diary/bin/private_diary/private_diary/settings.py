@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,9 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'private_diary',
         'USER': os.environ.get('DB_USER'),
-        'PASSWORD' : os.environ.get('DB_PASSWORD'),
-        'HOST' : '',
-        'PORT' : '',
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -134,27 +135,27 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
 
-    'loggers' : {
-        'django' : {
-            'handlers' : ['console'],
-            'level' : 'INFO'
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO'
         },
-        'diary' : {
-            'handlers' : ['console'],
-            'level' : 'DEBUG',
+        'diary': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
         },
     },
 
-    'handlers' : {
-        'console' : {
+    'handlers': {
+        'console': {
             'level': 'DEBUG',
-            'CLASS' : 'loggeing.StreamHandler',
+            'class': 'logging.StreamHandler',
             'formatter': 'dev'
         },
     },
 
-    'formatter' : {
-        'dev' : {
+    'formatters': {
+        'dev': {
             'format': '\t'.join([
                 '%(asctime)s',
                 '[%(levelname)s]',
