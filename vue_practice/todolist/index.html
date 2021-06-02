@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <h1>Todo</h1>
+
+      <!-- tab area -->
+      <div id="tab">
+        <div class="tab-list" v-bind:class="{ '-active': filter === 'inbox' }">
+          <button v-on:click="setFilter('inbox')">Inbox</button>
+        </div>
+        <div
+          class="tab-list"
+          v-bind:class="{ '-active': filter === 'completed' }"
+        >
+          <button v-on:click="setFilter('completed')">Done</button>
+        </div>
+      </div>
+      <!-- input todo -->
+      <form id="input-form">
+        <div class="input-text">
+          <label for="input-text">Todo</label>
+          <input
+            type="text"
+            id="input-text"
+            name="todo-text"
+            placeholder="do my homework"
+          />
+        </div>
+
+        <div class="submit">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <table id="todo-table">
+        <tbody id="todo-main">
+          <tr v-for="todo in filteredTodos" v-bind:key="todo.id">
+            <td class="cell-done">
+              <label v-bind:class="{'-active': todo.done}"
+                ><input type="checkbox"
+              /></label>
+            </td>
+            <td class="cell-text">{{ todo.text }}</td>
+            <td class="cell-created-at">{{ formatDate(todo.createdAt) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <script src="./vue.js"></script>
+  </body>
+</html>
