@@ -42,21 +42,29 @@
         </div>
 
         <div class="submit">
-          <button type="submit">Submit</button>
+          <button type="submit" v-bind:disabled="disabled">Submit</button>
         </div>
       </form>
-      <div>text:{{text}}</div>
+      <!-- <div>text:{{text}}</div> -->
 
       <table id="todo-table">
         <tbody id="todo-main">
           <tr v-for="todo in filteredTodos" v-bind:key="todo.id">
             <td class="cell-done">
-              <label v-bind:class="{'-active': todo.done}"
-                ><input type="checkbox" v-on:click="toggleTodo(todo.id)"
-              /></label>
+              <label v-bind:class="{'-active': todo.done}">
+                <!-- <input type="checkbox" v-on:click="toggleTodo(todo.id)" /> -->
+                <input v-model="todo.done" type="checkbox" />
+              </label>
             </td>
-            <td class="cell-text">{{ todo.text }}</td>
+            <td class="cell-text" v-if="todo.isEditing">
+              <input v-model="todo.text" />
+              <button v-on:click="saveTodo(todo.id)">Save</button>
+            </td>
+            <td class="cell-text" v-else v-on:click="editTodo(todo.id)">
+              {{ todo.text }}
+            </td>
             <td class="cell-created-at">{{ formatDate(todo.createdAt) }}</td>
+            <!-- <td>{{ todo.isEditing }}</td> -->
           </tr>
         </tbody>
       </table>

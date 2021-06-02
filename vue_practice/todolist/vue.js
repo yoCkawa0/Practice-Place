@@ -8,25 +8,29 @@ function createApp() {
                     id: 1,
                     text: "do my homework",
                     createdAt: 1622606882908, // 登録日の Unix タイムスタンプ（ミリ秒）
-                    done: false // タスクが完了したかどうか
+                    done: false, // タスクが完了したかどうか
+                    isEditing: false,
                 },
                 {
                     id: 2,
                     text: "clean my room",
                     createdAt: 1622506882908,
-                    done: false
+                    done: false,
+                    isEditing: false,
                 },
                 {
                     id: 3,
                     text: "clean my home",
                     createdAt: 1622406882908,
-                    done: false
+                    done: false,
+                    isEditing: false,
                 },
                 {
                     id: 4,
                     text: "go to bed",
                     createdAt: 1622306882908,
-                    done: true
+                    done: true,
+                    isEditing: false,
                 },
             ],
             text: ""
@@ -42,7 +46,10 @@ function createApp() {
                 return this.todos.filter(function (todo) {
                     return filter == "completed" ? todo.done : !todo.done
                 })
-            }
+            },
+            disabled: function () {
+                return this.text === ""
+            },
         },
 
         // タイムスタンプを変換
@@ -80,6 +87,22 @@ function createApp() {
                     text: text,
                     createdAt: Date.now(),
                     done: false
+                })
+            },
+            editTodo: function (id) {
+                this.todos = this.todos.map(function (todo) {
+                    if (todo.id === id) {
+                        todo.isEditing = true
+                    }
+                    return todo
+                })
+            },
+            saveTodo: function (id) {
+                this.todos = this.todos.map(function (todo) {
+                    if (todo.id === id) {
+                        todo.isEditing = false
+                    }
+                    return todo
                 })
             }
         },
