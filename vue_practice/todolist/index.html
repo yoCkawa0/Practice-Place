@@ -27,28 +27,32 @@
         </div>
       </div>
       <!-- input todo -->
-      <form id="input-form">
+      <form id="input-form" v-on:submit.prevent="handleSubmit">
         <div class="input-text">
           <label for="input-text">Todo</label>
           <input
+            v-model="text"
             type="text"
             id="input-text"
             name="todo-text"
             placeholder="do my homework"
           />
+          <!-- v-bind:value="text"
+          v-on:input="handleInput" -->
         </div>
 
         <div class="submit">
           <button type="submit">Submit</button>
         </div>
       </form>
+      <div>text:{{text}}</div>
 
       <table id="todo-table">
         <tbody id="todo-main">
           <tr v-for="todo in filteredTodos" v-bind:key="todo.id">
             <td class="cell-done">
               <label v-bind:class="{'-active': todo.done}"
-                ><input type="checkbox"
+                ><input type="checkbox" v-on:click="toggleTodo(todo.id)"
               /></label>
             </td>
             <td class="cell-text">{{ todo.text }}</td>

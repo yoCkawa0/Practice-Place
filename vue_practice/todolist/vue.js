@@ -28,7 +28,9 @@ function createApp() {
                     createdAt: 1622306882908,
                     done: true
                 },
-            ]
+            ],
+            text: ""
+
         },
 
         computed: {
@@ -47,15 +49,38 @@ function createApp() {
         methods: {
             formatDate: function (timestamp) {
                 const date = new Date(timestamp)
-
                 const year = date.getFullYear()
                 const month = date.getMonth() + 1
                 const day = date.getDate()
-
                 return year + "." + month + "." + day
             },
             setFilter: function (filter) {
                 this.filter = filter
+            },
+            toggleTodo: function (id) {
+                this.todos = this.todos.map(function (todo) {
+                    if (todo.id === id) {
+                        todo.done = !todo.done
+                    }
+                    return todo
+                })
+            },
+            // handleInput: function (event) {
+            //     this.text = event.target.value
+            // }
+            handleSubmit: function () {
+                // event.preventDefault();
+                this.addTodo(this.text)
+
+                this.text = ""
+            },
+            addTodo: function (text) {
+                this.todos.push({
+                    id: this.todoLength + 1,
+                    text: text,
+                    createdAt: Date.now(),
+                    done: false
+                })
             }
         },
     })
