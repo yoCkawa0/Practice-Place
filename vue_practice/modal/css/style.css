@@ -255,7 +255,7 @@ body {
 .fade-enter-active,
 .fade-leave-active {
   /** opacityを0.3秒かけてアニメーションさせる **/
-  transition: opacity 0.3s;
+  transition: opacity 1s;
 }
 
 .fade-enter,

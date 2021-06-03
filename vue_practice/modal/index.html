@@ -37,21 +37,24 @@
         <button id="modal-open-btn" @click.prevent.stop="openModal">
           Open Modal Window
         </button>
-        <div class="modal-overlay" v-if="isOpenModal">
-          <div id="modal">
-            <button id="modal-close-btn" @click.prevent.stop="closeModal">
-              X
-            </button>
-            <div id="modal-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore explicabo consectetur ipsa necessitatibus blanditiis.
-                Laborum assumenda blanditiis saepe ab officiis minima sequi
-                mollitia ad et, maiores quis a nobis tempore.
-              </p>
+        <transition name="fade">
+          <div class="modal-overlay" v-if="isOpenModal">
+            <div id="modal">
+              <button id="modal-close-btn" @click.prevent.stop="closeModal">
+                X
+              </button>
+
+              <div id="modal-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore explicabo consectetur ipsa necessitatibus
+                  blanditiis. Laborum assumenda blanditiis saepe ab officiis
+                  minima sequi mollitia ad et, maiores quis a nobis tempore.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </transition>
       </div>
     </div>
 
