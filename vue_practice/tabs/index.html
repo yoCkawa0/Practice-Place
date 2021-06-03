@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common UI</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="wrapper">
+        <h1>Tab List</h1>
+        <div id="tab">
+          <!-- <div class="tab-list">
+          <button>tab1</button>
+        </div>
+        <div class="tab-list">
+          <button>tab2</button>
+        </div>
+        <div class="tab-list">
+          <button>tab3</button>
+        </div>
+        <div class="tab-list">
+          <button>tab4</button>
+        </div>
+        <div id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            laboriosam aut earum, quia modi deleniti officia perspiciatis aliquam
+            omnis. A alias, velit aut at dolorum animi molestiae aliquid ipsa
+            maxime?
+        </div>
+    -->
+          <div
+            v-for="(tab, index) in tabs"
+            :key="tab.id"
+            @click="onClick(index)"
+            class="tab-list"
+            :class="{'-active': index === currentTabIndex}"
+          >
+            <button>{{ tab.name }}</button>
+          </div>
+        </div>
+        <div id="content">{{ currentTabContent }}</div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <script src="./vue.js"></script>
+  </body>
+</html>
