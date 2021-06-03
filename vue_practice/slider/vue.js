@@ -73,7 +73,15 @@ function createApp() {
             closeMenu() {
                 this.isOpenMenu = false
             }
-        }
+        },
+    })
+
+    Vue.use(VueAwesomeSwiper)
+    new Vue({
+        el: "#app4",
+        // data: {
+
+        // }
     })
 }
 
