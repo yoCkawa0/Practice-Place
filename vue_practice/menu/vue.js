@@ -59,6 +59,22 @@ function createApp() {
             })
         },
     })
+
+    // app3 area
+    new Vue({
+        el: "#app3",
+        data: {
+            isOpenMenu: false,
+        },
+        methods: {
+            openMenu() {
+                this.isOpenMenu = true
+            },
+            closeMenu() {
+                this.isOpenMenu = false
+            }
+        }
+    })
 }
 
 function initialize() {

@@ -195,6 +195,75 @@ body {
   padding: 40px 30px;
 }
 
+/* menu area */
+#header {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 40px;
+  background: #e6e6e6;
+}
+.breadcrumb-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 20px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 20%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.breadcrumb-decoration {
+  display: block;
+  content: "";
+  margin: 0 auto;
+  width: 18px;
+  height: 2px;
+  background: black;
+}
+
+.breadcrumb-decoration:nth-child(2) {
+  margin: 4px auto;
+}
+
+.breadcrumb-menu {
+  position: absolute;
+  top: 0;
+  transform: translateX(0);
+  width: 300px;
+  height: 100vh;
+  background: #d5d5d5;
+}
+
+.breadcrumb-menu header {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 40px;
+  padding-bottom: 10px;
+}
+
+.breadcrumb-menu #list {
+  margin: 0;
+  padding: 0 40px;
+  list-style: none;
+}
+
+.breadcrumb-menu #list .item {
+  margin-bottom: 15px;
+}
+
+.breadcrumb-menu #list .item a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 16px;
@@ -252,13 +321,22 @@ body {
   }
 }
 
-.fade-enter-active,
+/* .fade-enter-active,
 .fade-leave-active {
-  /** opacityを0.3秒かけてアニメーションさせる **/
   transition: opacity 1s;
 }
 
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+} */
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.15s ease-in-out;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
 }

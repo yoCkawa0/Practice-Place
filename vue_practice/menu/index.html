@@ -11,8 +11,44 @@
   </head>
 
   <body>
+    <!-- menu area -->
+    <div id="app3">
+      <header id="header">
+        <!-- <h1>menu</h1> -->
+
+        <button class="breadcrumb-btn" @click.prevent.stop="openMenu">
+          <span class="breadcrumb-decoration"></span>
+          <span class="breadcrumb-decoration"></span>
+          <span class="breadcrumb-decoration"></span>
+        </button>
+        <transition name="slide">
+          <div class="breadcrumb-menu" v-if="isOpenMenu">
+            <header>
+              <buton class="breadcrumb-btn" @click.prevent.stop="closeMenu"
+                >X</buton
+              >
+            </header>
+            <ul id="list">
+              <li class="item">
+                <a href="#">TOP</a>
+              </li>
+              <li class="item">
+                <a href="#">About</a>
+              </li>
+              <li class="item">
+                <a href="#">NEWS</a>
+              </li>
+              <li class="item">
+                <a href="#">CONTANT</a>
+              </li>
+            </ul>
+          </div>
+        </transition>
+      </header>
+    </div>
+
     <!-- tab area -->
-    <div id="app1">
+    <!-- <div id="app1">
       <div id="wrapper">
         <h1>Tab List</h1>
         <div id="tab">
@@ -28,10 +64,10 @@
         </div>
         <div id="content">{{ currentTabContent }}</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- modal area -->
-    <div id="app2">
+    <!-- <div id="app2">
       <div id="wrapper">
         <h1>Modal</h1>
         <button id="modal-open-btn" @click.prevent.stop="openModal">
@@ -43,7 +79,6 @@
               <button id="modal-close-btn" @click.prevent.stop="closeModal">
                 X
               </button>
-
               <div id="modal-content">
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -56,7 +91,7 @@
           </div>
         </transition>
       </div>
-    </div>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="./vue.js"></script>
