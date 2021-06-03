@@ -11,29 +11,11 @@
   </head>
 
   <body>
-    <div id="app">
+    <!-- tab area -->
+    <div id="app1">
       <div id="wrapper">
         <h1>Tab List</h1>
         <div id="tab">
-          <!-- <div class="tab-list">
-          <button>tab1</button>
-        </div>
-        <div class="tab-list">
-          <button>tab2</button>
-        </div>
-        <div class="tab-list">
-          <button>tab3</button>
-        </div>
-        <div class="tab-list">
-          <button>tab4</button>
-        </div>
-        <div id="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            laboriosam aut earum, quia modi deleniti officia perspiciatis aliquam
-            omnis. A alias, velit aut at dolorum animi molestiae aliquid ipsa
-            maxime?
-        </div>
-    -->
           <div
             v-for="(tab, index) in tabs"
             :key="tab.id"
@@ -48,8 +30,32 @@
       </div>
     </div>
 
+    <!-- modal area -->
+    <div id="app2">
+      <div id="wrapper">
+        <h1>Modal</h1>
+        <button id="modal-open-btn" @click.prevent.stop="openModal">
+          Open Modal Window
+        </button>
+        <div class="modal-overlay" v-if="isOpenModal">
+          <div id="modal">
+            <button id="modal-close-btn" @click.prevent.stop="closeModal">
+              X
+            </button>
+            <div id="modal-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore explicabo consectetur ipsa necessitatibus blanditiis.
+                Laborum assumenda blanditiis saepe ab officiis minima sequi
+                mollitia ad et, maiores quis a nobis tempore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <script src="./vue.js"></script>
   </body>
 </html>

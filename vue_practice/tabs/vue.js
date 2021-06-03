@@ -1,6 +1,6 @@
 function createApp() {
     new Vue({
-        el: "#app",
+        el: "#app1",
         data: {
             currentTabIndex: 0,
             tabs: [{
@@ -36,10 +36,32 @@ function createApp() {
             }
         },
     })
+    new Vue({
+        el: "#app2",
+        data: {
+            isOpenModal: false,
+        },
+        methods: {
+            openModal() {
+                this.isOpenModal = true
+            },
+            closeModal() {
+                this.isOpenModal = false
+            },
+        },
+        mounted() {
+            const _this = this
+            document.addEventListener("click", function (event) {
+                const target = event.target.closest("#modal")
+                if (_this.isOpenModal && target == null) {
+                    _this.closeModal()
+                }
+            })
+        },
+    })
 }
 
 function initialize() {
     createApp()
 }
-
 document.addEventListener("DOMContentLoaded", initialize.bind(this))
