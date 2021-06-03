@@ -105,8 +105,16 @@
       <div id="wrapper">
         <h1>Swiper</h1>
 
-        <swiper>
+        <swiper :options="swiperOption">
           <swiper-slide>一枚目のスライド</swiper-slide>
+          <swiper-slide>2枚目のスライド</swiper-slide>
+          <swiper-slide
+            >画像の埋め込み
+            <img src="./images/code.jpg" width="400" height="200" />
+          </swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
       </div>
     </div>

@@ -79,9 +79,17 @@ function createApp() {
     Vue.use(VueAwesomeSwiper)
     new Vue({
         el: "#app4",
-        // data: {
-
-        // }
+        data: {
+            swiperOption: {
+                pagination: {
+                    el: ".swiper-pagination"
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            }
+        }
     })
 }
 
