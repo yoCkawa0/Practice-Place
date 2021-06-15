@@ -148,6 +148,8 @@ for i in range(n):
 m = int(input())
 for i in range(m):
     [p, a] = input().split()
+    print(p)
+    print(a)
     # print("--------")
     # print(p)
     # print(a)
@@ -155,3 +157,118 @@ for i in range(m):
 
 l = input()
 print(d[l])
+
+#
+n = int(input())
+dmg = {}
+
+for i in range(n):
+    s = input()
+    dmg[s] = 0
+
+m = int(input())
+
+for i in range(m):
+    [p, a] = input().split()
+    a = int(a)
+    dmg[p] += a
+
+names = list(dmg.keys())
+names.sort()
+
+for name in names:
+    print(dmg[name])
+
+#
+[p, q, r] = [int(i) for i in input().split()]
+AB = {}
+BC = {}
+
+for _ in range(p):
+    [i, j] = [int(n) for n in input().split()]
+    AB[i] = j
+
+for _ in range(q):
+    [j, k] = [int(n) for n in input().split()]
+    BC[j] = k
+
+AC = {}
+
+for i in range(1, p + 1):
+    AC[i] = BC[AB[i]]
+
+for i, k in AC.items():
+    print(i, k)
+
+#
+n = int(input())
+[a, b] = input().split()
+a = int(a)
+b = int(b)
+
+p = 1
+k = 1
+c = 0
+
+while n >= k:
+    k += p*a
+    p += k % b
+    c += 1
+
+
+print(c)
+# print(n)
+# print(a)
+# print(b)
+
+#
+H = int(input())
+n = 0
+pd1 = 1
+pd2 = 1
+pd3 = 1
+md1 = 1
+md2 = 1
+md3 = 1
+p = 0
+
+
+while p != 1:
+    # n += 1
+    n += 1
+    if n == 1 or n == 2:
+        H -= 1
+        print(n)
+        print("与えたd"+str(pd1))
+        print("受けたd"+str(md1))
+        print("------------")
+        print(H)
+        print("------------")
+        print("------------")
+
+    else:
+        # 与えるd
+        # md1 + md2
+        pd3 = pd2
+        pd2 = pd1
+        pd1 = md1 + md2
+        # print(pd1)
+        # print(pd2)
+        print(n)
+        print("与えたd"+str(pd1))
+
+        # 受けるd
+        md3 = md2
+        md2 = md1
+        md1 = (pd2*2) + pd3
+        H -= md1
+        print("受けたd"+str(md1))
+        print("------------")
+        print(H)
+        print("------------")
+        print("------------")
+        if H <= 0:
+            p = 1
+
+        # print(H)
+print(n)
