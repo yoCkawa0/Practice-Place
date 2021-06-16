@@ -272,3 +272,103 @@ while p != 1:
 
         # print(H)
 print(n)
+
+#
+n = int(input())
+num = 0
+for i in range(n):
+    [l, k] = input().split()
+    l = int(l)
+    k = int(k)
+
+    if l == k:
+        num += l*k
+    else:
+        num += l+k
+print(num)
+
+#
+pattern = input()
+string = input()
+result = 0
+
+for i in range(len(string) - len(pattern) + 1):
+    portion = string[i: i + len(pattern)]
+
+    if portion == pattern:
+        result += 1
+
+print(result)
+
+#
+num = int(input())
+inputs = {}
+
+for i in range(num):
+    tmp = input().split()
+    inputs[int(tmp[1])] = tmp[0]
+
+inputs = sorted(inputs.items())
+
+for i in inputs:
+    print(i[1])
+
+#
+n = input()
+s = n[0]
+tmp = s
+for i in range(1, 5):
+    if n[i] != s or n[i] == ".":
+        tmp = "D"
+        break
+print(tmp)
+
+#
+for i in range(5):
+    n = input()
+    s = n[0]
+    tmp = s
+    for l in range(1, 5):
+        print("------")
+        print(l)
+        print(tmp)
+
+        if n[l] != s or n[l] == ".":
+            tmp = "D"
+        if tmp == s:
+            break
+print(tmp)
+
+#
+for i in range(5):
+    n = input()
+    s = n[0]
+    tmp = "D"
+    c = 0
+    for l in range(1, 5):
+        if n[l] == s:
+            c += 1
+    if c == 4:
+        tmp = s
+        break
+print(tmp)
+
+#
+
+n = input()
+m = n.replace(' ', '')
+a = list(m)
+
+b = []
+for i in range(len(a)):
+    c = ord(a[i]) - 96
+    b.append(c)
+print(b)
+# print(len(b))
+
+d = []
+for i in range(len(b)-1):
+    c = b[i] + b[i+1]
+    d.append(c)
+# d = []
+print(d)
