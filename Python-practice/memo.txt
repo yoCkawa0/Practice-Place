@@ -1,0 +1,8 @@
+a = {key:next no}
+b = {key:next no}
+{% comment %} c = {key:next no} {% endcomment %}
+
+ans = {a->key: b->next no}
+
+
+c740b6f2bda96616882a0af01a52c4767407c41d
