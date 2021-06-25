@@ -10,15 +10,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u0&#z@gah3njzt01b03ry=ba+ahv8b-zr2-cte(a(yf_3epm*p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -27,6 +27,10 @@ INSTALLED_APPS = [
 
     'diary.apps.DiaryConfig',
     'accounts.apps.AccountsConfig',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -112,62 +116,90 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'INFO'
-        },
-        'diary': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'dev'
-        },
-    },
-
-    'formatters': {
-        'dev': {
-            'format': '\t'.join([
-                '%(asctime)s',
-                '[%(levelname)s]',
-                '%(pathname)s(Line:%(lineno)d)',
-                '%(message)s'
-            ])
-        },
-    }
-}
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend',
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'INFO'
+#         },
+#         'diary': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     },
+#
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'dev'
+#         },
+#     },
+#
+#     'formatters': {
+#         'dev': {
+#             'format': '\t'.join([
+#                 '%(asctime)s',
+#                 '[%(levelname)s]',
+#                 '%(pathname)s(Line:%(lineno)d)',
+#                 '%(message)s',
+#             ])
+#         },
+#     }
+# }
+#
+#
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend',
 
 # MESSAGE_TAGS = {
 #     messages.ERROR: 'alert alert-danger',
 #     messages.WARNING: 'alert alert-warning',
 #     messages.SUCCESS: 'alert alert-success',
 #     messages.INFO: 'alert alert-info',
-# }
+# } これでは機能しなかった
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     messages.WARNING: 'warning',
     messages.SUCCESS: 'success',
     messages.INFO: 'info',
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+
+LOGIN_REDIRECT_URL = 'diary:index'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+ACCOUNT_LOGOUT_ON_GET = True
+
+ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
+
+DEFAULT_FORM_EMAIL = 'admin@example.com'
+
+
+
