@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common UI</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- <link rel="stylesheet" href="path/to/swiper.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@5.0.2/css/swiper.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- menu area -->
+    <div id="app3">
+      <header id="header">
+        <!-- <h1>menu</h1> -->
+
+        <button class="breadcrumb-btn" @click.prevent.stop="openMenu">
+          <span class="breadcrumb-decoration"></span>
+          <span class="breadcrumb-decoration"></span>
+          <span class="breadcrumb-decoration"></span>
+        </button>
+        <transition name="slide">
+          <div class="breadcrumb-menu" v-if="isOpenMenu">
+            <header>
+              <buton class="breadcrumb-btn" @click.prevent.stop="closeMenu"
+                >X</buton
+              >
+            </header>
+            <ul id="list">
+              <li class="item">
+                <a href="#">TOP</a>
+              </li>
+              <li class="item">
+                <a href="#">About</a>
+              </li>
+              <li class="item">
+                <a href="#">NEWS</a>
+              </li>
+              <li class="item">
+                <a href="#">CONTANT</a>
+              </li>
+            </ul>
+          </div>
+        </transition>
+      </header>
+    </div>
+
+    <!-- tab area -->
+
+    <div id="app1">
+      <div id="wrapper">
+        <h1>Tab List</h1>
+        <div id="tab">
+          <div
+            v-for="(tab, index) in tabs"
+            :key="tab.id"
+            @click="onClick(index)"
+            class="tab-list"
+            :class="{'-active': index === currentTabIndex}"
+          >
+            <button>{{ tab.name }}</button>
+          </div>
+        </div>
+        <div id="content">{{ currentTabContent }}</div>
+      </div>
+    </div>
+
+    <!-- modal area -->
+    <div id="app2">
+      <div id="wrapper">
+        <h1>Modal</h1>
+        <button id="modal-open-btn" @click.prevent.stop="openModal">
+          Open Modal Window
+        </button>
+        <transition name="fade">
+          <div class="modal-overlay" v-if="isOpenModal">
+            <div id="modal">
+              <button id="modal-close-btn" @click.prevent.stop="closeModal">
+                X
+              </button>
+              <div id="modal-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Inventore explicabo consectetur ipsa necessitatibus
+                  blanditiis. Laborum assumenda blanditiis saepe ab officiis
+                  minima sequi mollitia ad et, maiores quis a nobis tempore.
+                </p>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </div>
+    </div>
+
+    <!-- slider area -->
+    <div id="app4">
+      <div id="wrapper">
+        <h1>Swiper</h1>
+
+        <swiper :options="swiperOption">
+          <swiper-slide>一枚目のスライド</swiper-slide>
+          <swiper-slide>2枚目のスライド</swiper-slide>
+          <swiper-slide
+            >画像の埋め込み
+            <img src="./images/code.jpg" width="400" height="200" />
+          </swiper-slide>
+          <div class="swiper-pagination" slot="pagination"></div>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./vue.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@5.0.2/js/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.min.js"></script>
+
+    <!-- Swiper library -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js"></script> -->
+    <!-- Vue library -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <!-- vue-awesome-swiper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper"></script> -->
+  </body>
+</html>
