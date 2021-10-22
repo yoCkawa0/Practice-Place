@@ -6,10 +6,14 @@ Will put together the remnants of the programs left on my Computer.
 
 ---
 
-## HTML & CSS
+<!-- ## HTML & CSS -->
 
 ## Javascript
 
+- vue_practice
+
 ## Python
 
-## Java
+- Python-practice
+
+<!-- ## Java -->
