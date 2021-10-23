@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Todo List</h1>
+
+        <!-- tab area -->
+        <div id="tab">
+            <button class="tab-list">inbox</button class="tab-list">
+            <button>done</button>
+            <select id="sort-menu" class="tab-list">
+                <option value="created-desc">登録日↓</option>
+                <option value="created-asc">登録日↑</option>
+                <option value="priority-desc">優先度↓</option>
+                <option value="priority-asc">優先度↑</option>
+            </select>
+        </div>
+
+        <div id="table">
+            <table>
+                <!-- id="todolist" -->
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>todo-name</th>
+                        <th>Registration date</th>
+                        <th>priority</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell-edit-button"><button>Edit</button></td>
+                        <td class="cell-text">do my homework</td>
+                        <td class="cell-created-at">2019.3.1</td>
+                        <td class="cell-priority">1</td>
+                        <td class="cell-done"><button id="btn-done">done</button></td>
+            
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- form -->
+        <form action="POST" id="input-form">
+            <div class="input-text">
+                <label for="input-text">TODO</label>
+                <input type="text" id="input-text" placeholder="do my homework">
+            </div>
+            <div class="submit">
+                <button type="submit">send it!</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
