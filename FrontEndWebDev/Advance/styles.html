@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating CSS</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        .newStyle{
+            background-color: lightgreen;
+
+        }
+    </style>
+</head>
+<body>
+    <p>This is the paragraph</p>
+    <button id="addClass">Add Class</button>
+    <button id="removeClass">Remove Class</button>
+    <button id="toggleClass">Add/Remove Class</button>
+    <button id="addCSS">Add CSS</button>
+
+
+    <script>
+        $(function(){
+            $("#addClass").click(function(){
+                $('p').addClass('newStyle');
+            })
+            $("#removeClass").click(function(){
+                $('p').removeClass('newStyle');
+            })
+            $("#toggleClass").click(function(){
+                $('p').toggleClass('newStyle');
+            })
+            $("#addCSS").click(function(){
+                $('p').css({
+                    'color' : 'red',
+                    'padding' : '10px',
+                });
+            })
+
+
+
+        });
+    </script>
+</body>
+</html>

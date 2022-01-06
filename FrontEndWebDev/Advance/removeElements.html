@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Elements</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    <ul>
+        <li>List Item</li>
+    </ul>
+
+    <button id="remove">Remove</button>
+    <button id="empty">Empty</button>
+    <script>
+        $(function(){
+            $('#remove').click(function(){
+                $('li').remove();
+            });
+            $('#empty').click(function(){
+                $('li').empty();
+            });
+
+        });
+    </script>
+</body>
+</html>

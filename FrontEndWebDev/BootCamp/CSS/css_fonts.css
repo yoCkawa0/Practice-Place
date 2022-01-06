@@ -1,0 +1,77 @@
+/* css_fonts_lesson */
+
+/* *は全てのタグに適用 */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.external {
+  color: tomato;
+}
+.font-size {
+  /* font-size us to change the size of the text */
+
+  /* font-size can use %or px */
+  font-size: 200%;
+}
+.font-weight {
+  /* font-weight is to change the text-decoration-thickness of the way */
+  /* font-weight can use 100 to 900 or it can use bold  */
+  font-weight: bold;
+}
+
+.font-style {
+  /* font-style has 3 option : normal,italic,ablique */
+
+  font-style: italic;
+}
+
+.uppercase {
+  /* uppercase ~~~ will trasform all texts */
+  text-transform: uppercase;
+}
+.lowercase {
+  /* lowercase  will trasform all text */
+  text-transform: lowercase;
+}
+.capitalize {
+  /* capitalize ~~~ will transform all first letters into big letters */
+  text-transform: capitalize;
+}
+
+.none {
+  /* text decoration has 4 values none, underline, overlinem line-through*/
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.overline {
+  text-decoration: overline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+/* text align */
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+/* LETTER SPACING 
+~~~ adds spacing in between the letter of your text*/
+.letter-spacing {
+  letter-spacing: 30px;
+}
+
+/* WORD SPACING */
+.word-spacing {
+  word-spacing: 20px;
+}

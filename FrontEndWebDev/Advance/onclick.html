@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>Click me!</button> -->
+    <p id="demo" onclick="myfunc()">The quick brown fox jumps over the lazy dog</p>
+
+    <img src="images/p1.jpg" alt="" onclick="myPic()" id="pic" ondblclick="smallPic()">
+    <script>
+        function myfunc(){
+            document.getElementById("demo").style.color="red";
+        }
+
+        function myPic(){
+            document.getElementById("pic").style.width="300px";
+            document.getElementById("pic").style.height="300px";            
+        }
+
+        function smallPic(){
+            document.getElementById("pic").style.width="200px";
+            document.getElementById("pic").style.height="200px";            
+        }
+    </script>
+</body>
+</html>

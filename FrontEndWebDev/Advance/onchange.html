@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onchange</title>
+</head>
+<body>
+    Country:
+    <select name="country" id="country" onchange="myfunc()">
+        <option value="USA">Please choose a country</option>
+        <option value="USA">USA</option>
+        <option value="Chine">Chine</option>
+        <option value="Korea">Korea</option>
+        
+    </select>
+    <br><br>
+
+    Enter your name
+    <!-- <input type="" name="name" id="name" onchange="displayName()"><br><br><br> -->
+    <input type="" name="name" onchange="displayName(this.value)"><br><br><br>
+    <div id="demo"></div>
+
+    <script>
+        function myfunc(){
+            var x = document.getElementById("country").value;
+            document.getElementById("demo").innerHTML = "<h1>"+x+"</h1>";
+        }
+        function displayName(val){
+            // document.getElementById("demo").innerHTML = document.getElementById("name").value;
+            document.getElementById("demo").innerHTML = val;
+        }
+    </script>
+</body>
+</html>

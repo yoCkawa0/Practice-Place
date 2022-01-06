@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Activity</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        .container{
+            height: 700px;
+            width: 700px;
+            border: 1px solid black;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+            position: absolute;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#ball").click(function(){
+                $(this).animate({
+                    left: '600px',
+                    top: '600px'
+                });
+            });
+
+            $("#btn").click(function(){
+                $("#ball").animate({
+                    left: '9px',
+                    top: '9px'
+                    // 1px border + 8px
+                });
+            });
+
+
+        });
+    </script>
+
+</head>
+<body>
+        <div class="container">
+            <img src="./images/avatar.png" alt="" id="ball">
+        </div>
+        <button id="btn">Reset</button>
+</body>
+</html>

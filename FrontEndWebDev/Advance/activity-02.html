@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 02 - Function and Inputs</title>
+</head>
+<body>
+
+
+    <button id="1" value="1">1</button>
+    <button id="2" value="2">2</button>
+    <button id="3" value="3">3</button>
+    <button id="4" value="4">4</button>
+    <button id="5" value="5">5</button>
+    <button id="6" value="6">6</button>
+    <button id="7" value="7">7</button>
+    <button id="8" value="8">8</button>
+    <button id="9" value="9">9</button>
+    <button id="0" value="0">0</button>
+
+    
+    <button onclick="add()">calculate</button>
+    <button onclick="minus()">calculate</button>
+    <button onclick="mult()">calculate</button>
+    <button onclick="div()">calculate</button>
+    <h2>result : </h2>
+
+    <br>
+    <br>
+    <br>
+
+    <input type="text" id="firstNumber" >
+    <input type="text" id="secondNumber">
+    <p>result : </p>
+    <button onclick="add()">calculate</button>
+
+    <script>
+        
+
+        // act2
+        function add(){
+            var firstNumber = document.getElementById("firstNumber").value;
+            var secondNumber = document.getElementById("secondNumber").value;
+            var result = parseInt(firstNumber) + parseInt(secondNumber);
+            // console.log(result);
+            console.log(parseInt(firstNumber) + parseInt(secondNumber));
+            // return firstNumber + secondNumber;
+            document.getElementsByTagName("p")[0].innerHTML = "result : " + result;
+        }
+    </script>
+</body>
+</html>

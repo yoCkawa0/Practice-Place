@@ -1,0 +1,49 @@
+/* Pseudo Element ::before */
+/* This content is inside the element you call not outside By default Pseudo element is inline */
+
+p::before {
+  /* 前にコンテンツを追加できるelement */
+  content: "I am pseudo content";
+  background-color: blue;
+  width: 200px;
+  height: 20px;
+  display: block;
+}
+
+h1::after {
+  /* 後ろにコンテンツを追加できるelement */
+  content: "I am content";
+  background-color: green;
+}
+
+h2::before {
+  /* 前にコンテンツを追加できるelement */
+  content: open-quote;
+  font-size: 35px;
+  color: red;
+}
+
+h2::after {
+  /* 前にコンテンツを追加できるelement */
+  content: close-quote;
+  font-size: 35px;
+  color: blue;
+}
+
+/* Content can't have background image */
+h3::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 25px;
+  border: solid red 2px;
+  background-image: url("../../img/avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h4::before {
+  content: url("../../img/avatar.png");
+}

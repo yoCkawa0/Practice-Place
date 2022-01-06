@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        #resizable{
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $('#resizable').resizable();
+        }); 
+    </script>
+</head>
+<body>
+    <div id="resizable" class="ui-widget-content">
+        <h4 class="ui-widget-header">You can resize this</h4>
+    </div>
+</body>
+</html>

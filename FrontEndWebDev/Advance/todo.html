@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style></style>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                // alert($("p").html());
+                var newlist = $("#inputbox").val();
+                $('ul').append('<li>'+ newlist+'</li>');
+                $("#inputbox").val("");
+                // alert(newlist);
+                // $("#newlist").html("<li>" + newlist +"</li>");
+
+                // var newlist2 = [];
+                // for(var i = -1;i <= newlist2.lenght;i++){
+                //     newlist2 = $("#inputbox").val();
+                //     console.log(i);
+                //     document.getElementById("#newlist li")[i].innerHTML = "<li>"+newlist2+"</li>";
+                // }
+                
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>My TODO List</h1>
+        <input type="text" name="" id="inputbox">
+        <button id="add">Add</button>
+        <ul id="newlist">
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI effects Activity</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        .big-box{
+            display: flex;
+            border: 10px solid pink;
+        }
+        .container{
+            width: 30%;
+            margin: 0 auto;
+            height: 300px;
+            
+            /* float: left; */
+        }
+        .toggler{
+            /* width: 400px; */
+            /* height: 400px; */
+            position: relative;
+        }
+        .effect{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .ui-effects-transfer{
+            border: 2px dotted pink;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            var values = 0;
+            function runEffect(){
+                var selectedEffect = $('.effectTypes').val();
+                var options = {};
+                
+                // alert(values);
+
+                if(selectedEffect == "scale"){
+                    options = {percent: 50};
+                }else if(selectedEffect =="transfer"){
+                    options = {to: "img",className: "ui-effects-transfer"};
+                }else if(selectedEffect =="size"){
+                    options = {to: {width: 200, height: 60}};
+                }
+
+                $(".effect").effect(selectedEffect, options, 500, callback());
+            }
+
+            function callback(){
+                setTimeout(function(){
+                    $(".effect").removeAttr("style").hide().fadeIn();
+                },1000);
+            };
+
+            $("img").on("click", function(){
+                // console.log(10);
+                values =  $(this).data('id');
+                alert(values);
+                // runEffect();   
+                // return false;
+                
+            });
+        }); 
+
+    </script>
+</head>
+<body>
+    <div class="big-box">
+        <div class="container">
+            <div class="toggler">
+                <div class="effect ui-widget-content ui-corner-all">
+                    <img src="./images/avatar.png" class="run ui-state-default ui-corner-all ui-widget-content ui-corner-all" >
+                </div>
+            </div>
+    
+                <select name="effects" class="effectTypes">
+                    <option value="blind">Blind</option>
+                    <option value="bounce">Bounce</option>
+                    <option value="clip">Clip</option>
+                    <option value="drop">Drop</option>
+                    <option value="fade">Fade</option>
+                    <option value="fold">Fold</option>
+                    <option value="highlight">Highlight</option>
+                    <option value="puff">Puff</option>
+                    <option value="pulsate">Pulsate</option>
+                    <option value="scale">Scale</option>
+                    <option value="shake">Shake</option>
+                    <option value="size">Size</option>
+                    <option value="slide">Slide</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+            <!-- <button id="run" class="ui-state-default ui-corner-all">Run</button> -->
+    
+            </div>
+    
+        <div class="container">
+            <div class="toggler">
+                <div class="effect ui-widget-content ui-corner-all">
+                    <img src="./images/avatar.png" id="no1" class="run ui-state-default ui-corner-all ui-widget-content ui-corner-all" onclick="runEffect()">
+                </div>
+            </div>
+    
+                <select name="effects" class="effectTypes">
+                    <option value="blind">Blind</option>
+                    <option value="bounce">Bounce</option>
+                    <option value="clip">Clip</option>
+                    <option value="drop">Drop</option>
+                    <option value="fade">Fade</option>
+                    <option value="fold">Fold</option>
+                    <option value="highlight">Highlight</option>
+                    <option value="puff">Puff</option>
+                    <option value="pulsate">Pulsate</option>
+                    <option value="scale">Scale</option>
+                    <option value="shake">Shake</option>
+                    <option value="size">Size</option>
+                    <option value="slide">Slide</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+            <!-- <button id="run" class="ui-state-default ui-corner-all">Run</button> -->
+    
+        </div>
+    
+        <div class="container">
+        <div class="toggler">
+            <div class="effect ui-widget-content ui-corner-all">
+                <img src="./images/avatar.png" class="run ui-state-default ui-corner-all ui-widget-content ui-corner-all" onclick="runEffect()" value="3">
+            </div>
+        </div>
+
+            <select name="effects" class="effectTypes">
+                <option value="blind">Blind</option>
+                <option value="bounce">Bounce</option>
+                <option value="clip">Clip</option>
+                <option value="drop">Drop</option>
+                <option value="fade">Fade</option>
+                <option value="fold">Fold</option>
+                <option value="highlight">Highlight</option>
+                <option value="puff">Puff</option>
+                <option value="pulsate">Pulsate</option>
+                <option value="scale">Scale</option>
+                <option value="shake">Shake</option>
+                <option value="size">Size</option>
+                <option value="slide">Slide</option>
+                <option value="transfer">Transfer</option>
+            </select>
+        <!-- <button id="run" class="ui-state-default ui-corner-all">Run</button> -->
+
+        </div>
+
+    </div>
+</body>
+</html>

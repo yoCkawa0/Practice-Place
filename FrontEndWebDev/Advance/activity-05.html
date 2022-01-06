@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity - 05 Events and Loops</title>
+</head>
+<body>
+    <input type="text" id="person">
+    <button onclick="add()">add</button>
+    <ul id="unorder">
+        <li>Chester</li>
+
+    </ul>
+
+    <script>
+        var persons = ["chester"];
+            // var users = document.createElement("li");
+            // document.body.appendChild(users);               
+
+        function add(){
+            for(var i = 0;i <= persons.length;i++){
+
+                var person = document.getElementById("person").value;
+                persons.push(person);
+                console.log(persons);
+                console.log("------------");
+                // var users = document.createElement("li");
+                // document.body.appendChild(users);               
+
+                // document.getElementsByTagName("li")[i+1].innerHTML = person;
+            }
+        }
+    </script>
+</body>
+</html>

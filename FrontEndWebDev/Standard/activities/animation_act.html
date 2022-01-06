@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        /* animation-name: sun;
+        animation-duration: 5s; */
+        position: relative;
+        animation: sun 5s infinite;
+        transition: width 2s, height 2s, transform 2s;
+      }
+
+      img {
+        animation-timing-function: linear;
+      }
+      @keyframes sun {
+        /* from {
+          top: 800px;
+        }
+        to {
+          top: 0px;
+        } */
+        0% {
+          left: 0px;
+          top: 500px;
+        }
+        25% {
+          left: 0px;
+          top: 0px;
+        }
+
+        50% {
+          left: 500px;
+          top: 0px;
+        }
+        75% {
+          /* right: 500px; */
+          left: 500px;
+          top: 500px;
+        }
+        100% {
+          left: 0px;
+          top: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/sun.png" alt="" />
+  </body>
+</html>

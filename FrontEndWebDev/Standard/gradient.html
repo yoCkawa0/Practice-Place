@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grad1 {
+        height: 100vh;
+        background-color: salmon;
+        /* background-image: linear-gradient(salmon, yellow); */
+        /* background-image: linear-gradient(to left, salmon, yellow); */
+        /* background-image: linear-gradient(to bottom, salmon, yellow); */
+        /* background-image: linear-gradient(to top, salmon, yellow); */
+        /* background-image: linear-gradient(90deg, salmon, yellow, green); */
+        /* background-image: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 0),
+          rgba(255, 0, 0, 1)
+        ); */
+        /* background-image: radial-gradient(circle, salmon, yellow, blue); */
+        background-image: radial-gradient(
+          farthest-side at 60% 30%,
+          salmon,
+          yellow
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grad1">This is gradient</div>
+  </body>
+</html>

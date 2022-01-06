@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 auto;
+      }
+
+      .container-float {
+        width: 100%;
+      }
+
+      .header {
+        width: 100%;
+        float: left;
+      }
+
+      .columns-float {
+        width: 100%;
+        float: left;
+      }
+
+      .columns-float > .column {
+        width: 33.33%;
+        float: left;
+      }
+
+      .footer {
+        float: left;
+      }
+
+      /* flex */
+      .columns-flex {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .columns-flex > .column {
+        width: 33.33%;
+      }
+
+      /* grid */
+      .container-grid {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "no1 no2 no3"
+          "footer footer footer";
+      }
+
+      .header {
+        /* margin: 0 auto; */
+        height: 200px;
+        text-align: center;
+        background-color: gray;
+        grid-area: header;
+      }
+      h1 {
+        margin: 0 auto;
+        margin-top: 80px;
+      }
+      .no1 {
+        height: 400px;
+        background-color: aqua;
+        grid-area: no1;
+      }
+
+      .no2 {
+        height: 400px;
+        background-color: salmon;
+        grid-area: no2;
+      }
+
+      .no3 {
+        height: 400px;
+        background-color: lightgreen;
+        grid-area: no3;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        background-color: gray;
+        grid-area: footer;
+      }
+      .footer > p {
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- float -->
+    <div class="container-float">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="columns-float">
+        <div class="column no1">No1</div>
+        <div class="column no2">No2</div>
+        <div class="column no3">No3</div>
+      </div>
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+    <hr style="width: 100%; float: left; border: 10px solid black" />
+
+    <!-- flex -->
+    <div class="container-flex">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="columns-flex">
+        <div class="column no1">No1</div>
+        <div class="column no2">No2</div>
+        <div class="column no3">No3</div>
+      </div>
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+    <hr style="border: 10px solid black" />
+    <!-- grid -->
+    <div class="container-grid">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+      <!-- <div class="columns"> -->
+      <div class="column no1">No1</div>
+      <div class="column no2">No2</div>
+      <div class="column no3">No3</div>
+      <!-- </div> -->
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>

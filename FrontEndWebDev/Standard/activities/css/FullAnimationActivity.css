@@ -1,0 +1,107 @@
+#out {
+  border: 5px solid black;
+  width: 1000px;
+  height: 300px;
+}
+
+div {
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+}
+
+#box1 {
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  float: left;
+  margin: 0 auto;
+
+  animation-name: box1;
+  animation-duration: 5s;
+  position: relative;
+  background-color: blue;
+}
+
+#box2 {
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  float: right;
+  margin: 0 auto;
+
+  animation-name: box2;
+  animation-duration: 5s;
+  position: relative;
+  background-color: red;
+}
+
+#box3 {
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  float: left;
+  margin: 0 auto;
+
+  animation-name: box3;
+  animation-duration: 5s;
+  position: relative;
+  background-color: orange;
+}
+
+#box4 {
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  float: right;
+  margin: 0 auto;
+
+  animation-name: box4;
+  animation-duration: 5s;
+  position: relative;
+  background-color: green;
+}
+
+@keyframes box1 {
+  from {
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    left: 400px;
+    top: 0px;
+  }
+}
+
+@keyframes box2 {
+  from {
+    left: 1000px;
+    top: 0px;
+  }
+  to {
+    left: 600px;
+    top: 0px;
+  }
+}
+
+@keyframes box3 {
+  from {
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    left: 400px;
+    top: 0px;
+  }
+}
+
+@keyframes box4 {
+  from {
+    left: 1000px;
+    top: 0px;
+  }
+  to {
+    left: 600px;
+    top: 0px;
+  }
+}

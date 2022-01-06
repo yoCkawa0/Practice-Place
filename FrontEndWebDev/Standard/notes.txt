@@ -1,0 +1,23 @@
+
+
+------------------------------------
+first-child
+- is used to select the specified selector
+of the first child of the parent
+last-child
+- last child of parent element
+nth-child(n)
+opacity - will make your element trasparent
+box-model
+color
+font-family
+    google font
+font-size
+icon
+    fontawesome
+height, line-height
+width
+display
+    inline, block, inline-block, none
+position
+    static, relative, absolute, fixed, sticky

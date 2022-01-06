@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+
+    <style>
+        #trigger , #slideUp, #slideToggle , #content{
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #content{
+            display: none;
+            padding: 100px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#trigger").click(function(){
+                $("#content").slideDown(1000);
+            });
+
+            $("#slideUp").click(function(){
+                $("#content").slideUp(1000);
+            });
+
+            $("#slideToggle").click(function(){
+                $("#content").slideToggle(1000);
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="trigger">Click Me! (slideDown)</div>
+    <div id="slideUp">Click Me! (slideUp)</div>
+    <div id="slideToggle">Click Me! (slideToggle)</div>
+    <div id="content">The quick brow for jumps over the lazy dog.</div>
+</body>
+</html>

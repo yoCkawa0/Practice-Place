@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#text1").text("This is new text");
+            });
+            $("#btn2").click(function(){
+                $("#text2").html("<h5>Hi</h5>");
+            });
+            $("#btn3").click(function(){
+                $("#country").val("Japan");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <p id="text1">Welcome</p>
+    <p id="text2">Hello</p>
+
+    Country: <input type="text" name="" id="country" value="USA">
+    <!-- <p id="placeholder"></p> -->
+    <br>
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+
+</body>
+</html>

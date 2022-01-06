@@ -1,0 +1,52 @@
+/* Selecting throught element name */
+/* p {
+  color: blue;
+} */
+
+/* Selecting through Class Name */
+.div2 {
+  /* width: 200px;
+  height: 20px;
+  background-color: pink; */
+}
+
+/* Selecting through ID Name */
+#div1 {
+  /* width: 250px;
+  height: 40px;
+  border: solid red 2px; */
+}
+
+/* Selecting through Descendant Selector */
+#div1 p {
+  /* color: green; */
+  /* background-color: skyblue; */
+}
+
+/* Selecting through Child Selector */
+/* Put style on the direct child elements */
+#div3 > p {
+  /* background-color: red; */
+}
+
+section > p {
+  /* background-color: blue; */
+}
+
+/* Selecting through Adjacent Selector */
+/* give style after the element you call */
+div + p {
+  /* divの直後のpにのみ作用する */
+  /* background-color: violet; */
+}
+
+p + p {
+  /* pの直後のpにのみ作用する */
+  /* background-color: yellow; */
+}
+
+/* Selecting through General Sibling Selector */
+div ~ p {
+  /* divの下にあるｐにヒットする */
+  background-color: green;
+}

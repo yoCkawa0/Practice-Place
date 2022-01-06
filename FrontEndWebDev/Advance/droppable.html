@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droppable</title>
+    <!-- <script src="./assets/js/jquery-3.5.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #drag{
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid black; */
+            float: left;
+            margin: 10px;
+        }
+        #drop{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            float: left;
+        }
+
+    </style>
+
+    <script>
+        $(function(){
+            $('#drag').draggable();
+
+            $('#drop').droppable({
+                drop:function(event,ui){
+                    $(this).addClass("ui-state-highlight")
+                            .find("p")
+                                .html("Dropped!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="drag">
+        <p>Drag this text</p>
+    </div>
+    <div id="drop">
+        <p>Drop here</p>
+    </div>
+</body>
+</html>

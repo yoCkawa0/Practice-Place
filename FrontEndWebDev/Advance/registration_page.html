@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 20%;
+            float: left;
+            margin: 0 auto;
+        }
+        .logo > h1{
+            margin: 0 auto;
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+        .nav{
+            width: 50%;
+            float: right;
+            margin: 0 auto;
+            padding-right: 20px;
+        }
+        ul{
+            list-style: none;
+            
+        }
+        li{
+            float: left;
+            display: inline;
+            padding-left: 20px;
+
+        }
+
+        /* registration area */
+        .regi > h2 , .regi > p{
+            text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        .regi-form{
+            margin-left: 20%;
+            margin-right: 20%;
+
+        }
+        .regi-form > input{
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+
+        }
+
+        .regi-form > button{
+            width: 20%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 40%;
+            margin-right: 40%;
+
+        }
+        .regi-form > p{
+            font-size: 10px;
+            float: right;
+            margin-right: 15%;
+            color: red;
+        }
+        #alert1 , #alert2{
+            display: none;
+            text-align: center;
+            font-size: 14px;
+            width: 50%;
+            margin: 0 25%;
+        }
+
+
+        /* footer Area */
+        .footer{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>Top</li>
+                <li>News</li>
+                <li>About</li>
+                <li>Registration</li>
+            </ul>
+        </div>
+        
+    </div>
+    <hr>
+
+    <div class="regi">
+        <h2>Registration</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio quod beatae iste dolorum! Ratione nobis eaque tempora quibusdam similique. Porro.</p>
+
+        <div class="regi-form">
+            <input onchange="onInputChange(this)" id="firstname" placeholder="Firstname">
+            <input onchange="onInputChange(this)" id="lastname" placeholder="Lastname">
+            <input onchange="onInputChange(this)" id="middlename" placeholder="Middlename">
+            <input onchange="onInputChange(this)" id="age" placeholder="Age" type="number">
+            <p>※Age should be 18 above!</p>
+            
+            <p id="alert1">Please provide a neme.</p>
+            <p id="alert2">You cannot register at that age.</p>
+            <button onclick="submit()" id="submit">SUBMIT</button>
+        </div>
+    
+    </div>
+
+
+    <hr>
+    <div class="footer">
+        <p>© copyright</p>
+    </div>
+
+    <script>
+        var info = [];
+
+        function onInputChange(e){
+            var selectedId = e.getAttribute("id");
+            if(selectedId === "firstname" && e.value === ""){
+                e.style = "border:2px solid red;";
+                document.getElementById("alert1").style.display = "inline";
+            }
+            else if(selectedId === "firstname" && e.value !== ""){
+                e.style = "border:2px solid blue";
+                document.getElementById("alert1").style.display = "none";
+                info.push = e.value
+                console.log(info);
+            }
+            else if(selectedId === "lastname" && e.value === ""){
+                e.style = "border:2px solid red";
+                document.getElementById("alert1").style.display = "inline";
+            }
+            else if(selectedId === "lastname" && e.value !== ""){
+                e.style = "border:2px solid blue";
+                document.getElementById("alert1").style.display = "none";
+                info.push = e.value
+                console.log(info);
+
+            }
+            else if(selectedId === "age" && (e.value < 18 || e.value === "")){
+                e.style = "border:2px solid red";
+                document.getElementById("alert2").style.display = "inline";
+            }
+            else if(selectedId === "age" && e.value >= 19){
+                e.style = "border:2px solid blue";
+                document.getElementById("alert2").style.display = "none";
+                info.push = e.value
+                console.log(info);
+            }
+        };
+
+        function submit(){
+            // var first = document.getElementById("firstname").value;
+            // var last = document.getElementById("lastname").value;
+            // var middle = document.getElementById("middlename").value;
+            // var age = document.getElementById("age").value;
+            var first = document.getElementById("firstname");
+            var last = document.getElementById("lastname");
+            var middle = document.getElementById("middlename");
+            var age = document.getElementById("age");
+
+            if(first.value ==="" || last.value === "" || age.value === "" || age.value < 18){
+                alert("You cannot")
+            }else{
+                alert("Thank you for Registration")
+                console.log(first.value);
+                console.log(last.value);
+                console.log(middle.value);
+                console.log(age.value);
+                first.value = '';
+                first.style = "border:;";
+                last.value = '';
+                last.style = "border:;";
+                middle.value = '';
+                middle.style = "border:;";
+                age.value = '';
+                age.style = "border:;";
+                
+            }
+        }
+    </script>
+</body>
+</html>

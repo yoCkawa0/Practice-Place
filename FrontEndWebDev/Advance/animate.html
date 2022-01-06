@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate </title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        #box1{
+            background-color: pink;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        var $box = $('#box1');
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("#box1").animate({
+                        left: '250px',
+                        opacity: '0.5',
+                        height: '+=200px',
+                        width: '+=200px'
+                    });
+                });
+                $("#btn2").click(function(){
+                    $("#box1").animate({
+                        left: '8px',
+                        opacity: '1',
+                        height: '100px',
+                        width: '100px'
+                    });
+                });
+
+                $("#btn3").click(function(){
+                    var div = $("div");
+                    div.animate({
+                        height: '200px',
+                        opacity: '0.5'
+                    },1000);
+                    div.animate({
+                        width: '200px',
+                        opacity: '0.9'
+                    },1000);
+
+                    div.animate({
+                        height: '100px',
+                        opacity: '0.5'
+                    },1000);
+                    div.animate({
+                        width: '100px',
+                        opacity: '0.9'
+                    },1000);
+
+
+                });
+
+            });
+    </script>
+</head>
+<body>
+    <button id="btn1">Move Box1</button>
+    <button id="btn2">Reset Box1</button>
+    <button id="btn3">Animate Box</button>
+
+    <div id="box1">Box 1</div>
+</body>
+</html>

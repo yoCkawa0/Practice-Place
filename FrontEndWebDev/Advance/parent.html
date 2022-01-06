@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        body *{
+            border: 2px solid gray  ;
+
+        }
+    </style>
+</head>
+<body>
+    <div>div
+        <ul>ul
+            <li>li1
+                <span>span</span>
+            </li>
+            <li>li2
+                <a href="#">a</a>
+            </li>
+        </ul>
+        <p>p</p>
+    </div>
+
+    <script>
+        $(function(){
+            // $('span').parent().css('border','2px solid red');
+            // $('span').parents().css('border','2px solid red');
+            // $('span').parentsUntil('div').css('border','2px solid red');
+
+            // $('div').children().css('border','2px solid red');
+            $('div').find('span').css('border','2px solid red');
+
+        });
+    </script>
+</body>
+</html>

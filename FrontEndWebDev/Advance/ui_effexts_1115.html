@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI effects Activity</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        body{
+            margin: 0 auto;
+            display: flex;
+        }
+        .container{
+            width: 30%;
+        }
+        select{
+            margin-left: 25%;
+            width: 50%;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $(".img_ui").on("click", function(){
+                var selectedEffect = $(this).next('.effectTypes').val();
+                // console.log(selectedEffect);
+                var options = {};
+                if(selectedEffect == "scale"){
+                    options = {percent: 50};
+                }else if(selectedEffect =="transfer"){
+                    options = {to: "effectTypes",className: "ui-effects-transfer"};
+                }else if(selectedEffect =="size"){
+                    options = {to: {width: 200, height: 60}};
+                };
+                var name = this.className;
+                // console.log(name);
+                if(name == "img_ui no1"){
+                    $(".no1").effect(selectedEffect, options, 500);
+                    $(".no1").removeAttr("style").hide().fadeIn();
+                }else if(name == "img_ui no2"){
+                    $(".no2").effect(selectedEffect, options, 500);
+                    $(".no2").removeAttr("style").hide().fadeIn();
+                }else if(name == "img_ui no3"){
+                    $(".no3").effect(selectedEffect, options, 500);
+                    $(".no3").removeAttr("style").hide().fadeIn();
+                };
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="./images/avatar.png" class="img_ui no1">
+        <select name="effects" class="effectTypes">
+            <option value="blind">Blind</option>
+            <option value="bounce">Bounce</option>
+            <option value="clip">Clip</option>
+            <option value="drop">Drop</option>
+            <option value="fade">Fade</option>
+            <option value="fold">Fold</option>
+            <option value="highlight">Highlight</option>
+            <option value="puff">Puff</option>
+            <option value="pulsate">Pulsate</option>
+            <option value="scale">Scale</option>
+            <option value="shake">Shake</option>
+            <option value="size">Size</option>
+            <option value="slide">Slide</option>
+            <option value="transfer">Transfer</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <img src="./images/avatar.png" class="img_ui no2">
+        <select name="effects" class="effectTypes">
+            <option value="blind">Blind</option>
+            <option value="bounce">Bounce</option>
+            <option value="clip">Clip</option>
+            <option value="drop">Drop</option>
+            <option value="fade">Fade</option>
+            <option value="fold">Fold</option>
+            <option value="highlight">Highlight</option>
+            <option value="puff">Puff</option>
+            <option value="pulsate">Pulsate</option>
+            <option value="scale">Scale</option>
+            <option value="shake">Shake</option>
+            <option value="size">Size</option>
+            <option value="slide">Slide</option>
+            <option value="transfer">Transfer</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <img src="./images/avatar.png" class="img_ui no3">
+        <select name="effects" class="effectTypes">
+            <option value="blind">Blind</option>
+            <option value="bounce">Bounce</option>
+            <option value="clip">Clip</option>
+            <option value="drop">Drop</option>
+            <option value="fade">Fade</option>
+            <option value="fold">Fold</option>
+            <option value="highlight">Highlight</option>
+            <option value="puff">Puff</option>
+            <option value="pulsate">Pulsate</option>
+            <option value="scale">Scale</option>
+            <option value="shake">Shake</option>
+            <option value="size">Size</option>
+            <option value="slide">Slide</option>
+            <option value="transfer">Transfer</option>
+        </select>
+    </div>
+    <!-- <br>
+    <div class="test">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12958.627138445267!2d139.8019456677022!3d35.710062680187555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1605500029358!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div> -->
+</body>
+</html>

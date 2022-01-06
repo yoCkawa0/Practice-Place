@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Events</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <button id="btn1">Click Me1</button>
+    <button id="btn2">Click Me2</button>
+    <p>Hello World 1</p>
+    <p>Hello World 2</p>
+    <p>Hello World 3</p>
+    <p>Hello World 4</p>
+    <input type="text">
+    
+    
+    <script>
+        // document.getElementsByTagName('button')[0].addEventListener('click',function(){
+        //     alert(1);
+        // });
+        $('button').click(function(){
+            alert("I'm being clicked.");
+        });
+
+        $('p').click(function(){
+            // alert("I'm a p");
+            // console.log(this);
+            // $(this).css({color:'red'});
+            $(this).hide();
+        });
+
+        // $('input').focus(function(){
+        //     $(this).css({ backgroundColor:'red'});
+        // });
+
+        // $('input').blur(function(){
+        //     $(this).css({ backgroundColor:'blue'});
+        // });
+
+        $('input').on({
+            focus: function(){
+                $(this).css({ backgroundColor:"red"});
+            },
+            blur: function(){
+                // $(this).css({ backgroundColor:'blue'});
+                $(this).css({ backgroundColor:'blue',fontWeight:600});
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>

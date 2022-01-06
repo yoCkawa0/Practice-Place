@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+
+    <p>Selected car : <span></span></p>
+    <p>Selected car : </p>
+
+    <script>
+        var cars = ["BMV" , "Ford" , "Mitsubishi" , "Fiat" , "Saab"];
+
+        var carsOutput = "CARS : ";
+
+        
+
+        // for(var iterator = 0; iterator <= 20; iterator ++){
+        //     console.log(iterator);
+        // }
+
+        for(var iterator = 0; iterator < cars.length; iterator ++){
+            // console.log(cars[iterator]);
+            if(iterator === 0){
+                carsOutput = carsOutput + cars[iterator];
+            }else{
+                carsOutput = carsOutput + "-" + cars[iterator];
+            }
+
+            
+        }
+
+        // console.log("length" , cars.length);
+
+        // console.log(iterator);
+        // console.log(cars);
+        // console.log(cars[0]);
+
+        // document.getElementsByTagName("p")[0].innerHTML = cars[Array.length -1];
+        document.getElementsByTagName("span")[0].innerHTML = cars;
+
+        document.getElementsByTagName("p")[1].innerHTML = "Cars : " + cars[0] + "-" + cars[1] + "-" +cars[2] + "-" +cars[3] + "-" +cars[4];
+
+    </script>
+    
+</body>
+</html>

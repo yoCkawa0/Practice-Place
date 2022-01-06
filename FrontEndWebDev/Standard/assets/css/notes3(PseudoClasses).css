@@ -1,0 +1,52 @@
+/* Pseudo Classes */
+
+a:hover {
+  background-color: yellow;
+  cursor: pointer;
+  border: solid red 1px;
+}
+/* Pseudu Class :visited */
+a:visited {
+  color: gray;
+}
+
+/* Pseudu Class :link
+Only element or a with link or href will be affected */
+a:link {
+  color: green;
+}
+
+/* Pseudu Class :focus */
+/* Container link div is not affected by the style of :focus */
+textarea:focus {
+  background-color: yellow;
+}
+
+#maindiv {
+  width: 300px;
+  height: 300px;
+  border: solid red 2px;
+  display: inline-block;
+}
+
+#maindiv div:focus,
+h1:active {
+  background-color: yellow;
+}
+
+/* button:focus {
+  background-color: yellow;
+} */
+
+a:active,
+button:active {
+  background-color: green;
+}
+
+#lastdiv {
+  display: inline;
+}
+
+#lastdiv:focus {
+  background-color: yellow;
+}

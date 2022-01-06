@@ -1,0 +1,19 @@
+div{
+    height: 678px;
+    width: 100%;
+}
+
+.div1{
+    background-image: url(../images/beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.div2{
+    background-image: url(../images/coconut.jpg);
+    background-size: 200px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

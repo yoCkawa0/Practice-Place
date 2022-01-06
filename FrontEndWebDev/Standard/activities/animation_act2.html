@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .left {
+        padding-top: 150px;
+      }
+      .left,
+      .center,
+      .right {
+        float: left;
+      }
+      .left > img {
+        left: 0px;
+        position: relative;
+        animation: cloud1 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+      .center > img {
+        position: relative;
+        animation: sun 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+      .right > img {
+        right: 0px;
+        position: relative;
+        animation: cloud2 5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes cloud1 {
+        25% {
+          left: 0px;
+          /* top: 500px; */
+        }
+        50% {
+          left: 700px;
+          /* top: 0px;s */
+        }
+
+        /* 50% {
+          left: 0px;
+          top: 250px;
+        } */
+      }
+
+      @keyframes sun {
+        0% {
+          left: 0px;
+          top: 500px;
+        }
+        25% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+
+      @keyframes cloud2 {
+        25% {
+          right: 0px;
+          /* top: 500px; */
+        }
+        50% {
+          right: 700px;
+          /* top: 0px;s */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <img src="img/cloud1.jpeg" alt="" />
+    </div>
+    <div class="center">
+      <img src="img/sun.png" alt="" />
+    </div>
+    <div class="right">
+      <img src="img/cloud1.jpeg" alt="" />
+    </div>
+  </body>
+</html>

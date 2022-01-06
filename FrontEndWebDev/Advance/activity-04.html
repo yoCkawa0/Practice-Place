@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 03 - Slider</title>
+</head>
+<body>
+    <style>
+        #sliderArea{
+            background-color:lightblue;
+            width: 100%;
+            height: auto;
+            /* float: left; */
+        }
+
+        #sliderArea img{
+            width: 300px;
+            height: auto;
+            display:none;
+            float: left;
+        }
+        button{
+            margin-top: 125px;
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+    </style>
+    
+    <div id="sliderArea">
+        <button id="left" onclick="prevImg()"></button>
+        <img src="images/highlight1.png" id="no1" value="1">
+        <img src="images/highlight2.png" id="no2" value="2">
+        <img src="images/highlight3.png" id="no3" value="3">
+        <img src="images/highlight4.png" id="no4" value="4" >
+        <img src="images/highlight5.png" id="no5" value="5">
+        <img src="images/highlight6.png" id="no6" value="6">
+        <img src="images/highlight7.png" id="no7" value="7">
+        <button id="right" onclick="nextImg()"></button>
+    </div>
+    
+    <script>
+        // var Number1 = document.getElementById("no1").value;
+        // var Number2 = Number1;
+        document.getElementById("no1").style.display = "block";
+        var i = 1;
+        var n = i;
+
+        function nextImg(){        
+        n = i;
+        i += 1;
+
+        if(i == 1){
+            document.getElementById("no1").style.display = "block";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+
+        }
+        else if(i == 2){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "block";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+
+        }
+        else if(i == 3){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "block";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 4){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "block";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+
+        }
+        else if(i == 5){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "block";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+
+        }
+        else if(i == 6){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "block";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 7){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "block";
+            console.log(i);
+            i = 0;
+        }
+
+
+
+    }
+
+        function prevImg(){
+            n = i;
+            i -= 1;
+            
+            if(i == 0){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "block";
+            console.log(i);
+            i = 7;
+            }
+            if(i == 1){
+            document.getElementById("no1").style.display = "block";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 2){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "block";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 3){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "block";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 4){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "block";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 5){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "block";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 6){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "block";
+            document.getElementById("no7").style.display = "none";
+            console.log(i);
+        }
+        else if(i == 7){
+            document.getElementById("no1").style.display = "none";
+            document.getElementById("no2").style.display = "none";
+            document.getElementById("no3").style.display = "none";
+            document.getElementById("no4").style.display = "none";
+            document.getElementById("no5").style.display = "none";
+            document.getElementById("no6").style.display = "none";
+            document.getElementById("no7").style.display = "block";
+            console.log(i);
+            // i = 2;
+        }
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

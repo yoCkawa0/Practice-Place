@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper-text{
+            background-color: lightsalmon;
+            padding: 20px;
+            text-align: center;
+        }
+        input,button{
+            padding: 10px;
+
+        }
+        .inputbox{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            width: 50%;
+        }
+        h1{
+            margin-bottom: 10px;
+        }
+        button{
+            cursor: pointer;
+            background-color: salmon;
+            color: white;
+        }
+
+        ul{
+            display: flex;
+            flex-flow: column;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            margin: 0;
+            padding: 10px;
+            background-color: salmon;
+            /* width: 90%; */
+            position: relative;
+        }
+        /* .x{
+            width: 5%;
+            background-color: yellow;
+        } */
+        li:hover{
+            background-color: sandybrown;
+        }
+        li span{
+            /* display: inline-block; */
+            position: absolute;
+            font-size: 1.3em;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        li span:hover{
+            color: white;
+            background-color: red;
+            padding: 10px;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            // $('li').click(function(){
+            //     $(this).css('text-decoration','line-through');
+            //     elThis = $(this);
+            //     console.log(elThis);
+            // });
+
+
+            var num = 1;
+            $("#add").click(function(){
+                var newlist = $("#inputbox").val();
+                // $('ul').append('<li>'+ newlist+'<span>&times;</span></li>');
+                $('ul').append('<li class="t'+ num +'">' + newlist+'<span>&times;</span></li>');
+                $("#inputbox").val("");
+
+                num += 1;
+                console.log(num);
+            });
+        
+            
+
+            $('li').click(function(){
+                // alert(100);
+                // $("li").addClass("target");
+                // var num = 0;
+                // num = $('li').index('li');
+                // var index = $(this).index() + 1;
+                // alert('要素:' + index + '番目');
+                // alert(1);
+                // $('li:').remove();
+                // $("li").removeClass("target");
+                
+            });
+
+            $('li').click(function(event){
+                var target = $(event.target);
+
+                if(target.is('li')){
+                    // $(this).css('text-decoration','line-through');
+                    // var index = $(this).index() + 1;
+                    // alert('要素:' + index + '番目');
+                    // $("li:nth-child(index)").remove();
+                    $(this).remove();
+                    
+                }
+            });
+
+            $('.t2').click(function(){
+                $(this).css('text-decoration','line-through');
+
+                // elThis = $(this);
+                // console.log(elThis);
+            });
+
+            $('span').click(function(){
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper-text">
+            <h1>My TODO List</h1>
+            <input type="text" name="" id="inputbox">
+            <button id="add">Add</button>
+        </div>
+        <ul id="newlist">
+            <li class="t1">test test test</li>
+            <li class="t2">test test test</li>
+        </ul>
+    </div>
+</body>
+</html>

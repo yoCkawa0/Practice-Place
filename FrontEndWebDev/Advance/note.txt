@@ -1,0 +1,26 @@
+hide/show
+    hide
+    show
+    toggle
+fade - fade elements in and out of visibility
+    fadeIn
+    fadeOut
+    fadeToggle
+slide - slide elements up and down
+    slideDown
+    slideUp
+    slideToggle
+animate - custom animations
+    animate()
+jQuery HTML
+    get (getting of values from browser)
+        text() - return the text of selected elements
+        html() - return the content of selected elements (html)
+        val() - returns the value of form field
+    set (setting or putting value to yout webpage)
+        text(value)
+        html(value)
+        val(value)
+    add
+    remove
+    css classes

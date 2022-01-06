@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Introduction</title>
+    <style>
+        /* p , h1 , h2{
+            display: none;
+        } */
+    </style>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $('p').show();
+            $('.text').show();
+            $('#name').show();
+        });
+        // console.log(document.getElementsByTagName("p")[0]);
+        // console.log($('p')[0]);
+        // $('p').hide();
+        // $('p').show();
+        // $('h1').show();
+        // $('h2').show();
+    </script> -->
+</head>
+
+<body>
+    <p>Hello Earth</p>
+    <div class="container">
+        <p>Hello World</p>
+        <h1>Hello World</h1>
+        <h3>Hello World</h3>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.container').find('p').css({ color: 'red' , fontSize: '12px'});
+            // $('.container').find('#idname').css({ color: 'red' });
+        });
+    </script>
+    <!-- <p class="text">Hello World</p>
+    <h1 class="text">Hello World</h1>
+    <h2 id="name">Hello World</h2> -->
+</body>
+</html>

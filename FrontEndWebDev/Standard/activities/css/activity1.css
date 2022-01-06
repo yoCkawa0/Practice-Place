@@ -1,0 +1,23 @@
+div {
+  margin: 0 auto;
+  width: 500px;
+  height: 450px;
+  border: solid black 5px;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+section {
+  background-color: white;
+  width: 80%;
+  height: 170px;
+  margin: 25px auto 0px;
+  text-align: center;
+  border: solid red 5px;
+  color: green;
+}
+
+section + section {
+  border: solid green 5px;
+  color: red;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-box {
+        display: grid;
+        /* grid-template-columns: auto auto auto auto auto auto; */
+        grid-gap: 10px;
+        background-color: aquamarine;
+        padding: 10px;
+        /* grid-template-areas: "myArea myArea myArea myArea myArea"; */
+
+        /* grid-template-areas: "myArea myArea myArea . . . "; */
+
+        grid-template-areas:
+          "b1 b1 ."
+          "b1 b1 .";
+      }
+
+      .grid-box > div {
+        background-color: brown;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+      }
+
+      .item1 {
+        /* grid-area: b1; */
+      }
+      /* .item8 { */
+      /* Start at column 1 and end before column 5*/
+      /* 最初のカラムから５番目のカラムの１つ前まで */
+      /* grid-column: 1/5; */
+
+      /* start on column 1 and span(merge) 4 columns  */
+      /* grid-column: 最初の位置/span まとめるカラムの個数 ;*/
+      /* grid-column: 1/span 4 ;*/
+      /* grid-column: 2 / span 3; */
+
+      /* grid-row: 1/4; */
+      /* grid-row: 1 / span 2; */
+
+      /* start at row1, column 2 and end at before row 5, column 6 */
+      /* grid-area: 1/2/5/6; */
+
+      /* grid-area: 2/1 / span 2 / span 3; */
+      /* } */
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+      <!-- <div class="item7">7</div>
+      <div class="item8">8</div>
+      <div class="item9">9</div>
+      <div class="item10">10</div>
+      <div class="item11">11</div>
+      <div class="item12">12</div>
+      <div class="item13">13</div>
+      <div class="item14">14</div>
+      <div class="item15">15</div> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p.s1 {
+        width: 100px;
+        border: 1px solid black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clips;
+      }
+
+      p.s2 {
+        width: 100px;
+        border: 1px solid black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p.s1:hover,
+      p.s2:hover {
+        overflow: visible;
+      }
+
+      p.s3 {
+        width: 100px;
+        border: 1px solid black;
+        /* word-wrap: break-word; */
+      }
+
+      p.s4 {
+        width: 100px;
+        border: 1px solid black;
+        word-break: keep-all;
+      }
+
+      p.s5 {
+        width: 100px;
+        border: 1px solid black;
+        word-break: break-all;
+      }
+
+      p.s6 {
+        writing-mode: horizontal-tb;
+      }
+      span.s7 {
+        writing-mode: vertical-rl;
+      }
+      p.s8 {
+        writing-mode: vertical-rl;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="s1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta
+      sapiente, magni totam repellendus expedita.
+    </p>
+
+    <p class="s2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta
+      sapiente, magni totam repellendus expedita.
+    </p>
+
+    <p class="s3">
+      Loremipsum,dolorsitametconsecteturadipisicing elit. Suntdistinctiolibero
+      nam esse expedita minus ut veritatis, iste qui quod harum ex aspernatur
+      numquam molestiae reiciendis recusandae similique voluptate
+      necessitatibus!
+    </p>
+
+    <p class="s4">
+      Loremipsumdolorsi-tametconsecteturadipisici-ngelit. Suntdistinctiol ibero
+      nam esse expedit a minus ut veritatis, iste qui quod harum ex aspernatur
+      numquam molestiae reiciendis recusandae similique voluptate
+      necessitatibus!
+    </p>
+
+    <p class="s5">
+      Loremipsum,dolorsitametconsecteturadipisicing elit. Suntdistinctiolibero
+      nam esse expedita minus ut veritatis, iste qui quod harum ex aspernatur
+      numquam molestiae reiciendis recusandae similique voluptate
+      necessitatibus!
+    </p>
+
+    <p class="s6">The quick brown fox jumps over the laxy dog</p>
+    <p>The quick brown <span class="s7"> fox jumps </span>over the laxy dog</p>
+
+    <p class="s8">The quick brown fox jumps over the laxy dog<</p>
+  </body>
+</html>

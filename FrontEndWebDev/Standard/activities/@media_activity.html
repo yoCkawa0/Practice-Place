@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 auto;
+      }
+      .logo {
+        border: 1px solid blue;
+        height: 100px;
+        color: #0eb1dc;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+        padding-top: 30px;
+      }
+      .nav {
+        border: 1px solid blue;
+        background-image: url("img/mountain.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      ul {
+        background-color: #e7eaef;
+        border: 1px solid blue;
+        height: 100px;
+        width: 90%;
+        margin-top: 216px;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      ul > li {
+        display: inline;
+        margin-left: 10%;
+        /* width: 15%; */
+      }
+
+      li:hover {
+        background-color: #0eb1dc;
+      }
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      .pics {
+        width: 80%;
+        /* float: left; */
+      }
+      .pic1,
+      .pic2,
+      .pic3,
+      .pic4 {
+        border: 1px solid blue;
+        width: 20%;
+        height: 200px;
+        float: left;
+        margin: 2.5%;
+      }
+      img {
+        width: 100%;
+        height: 200px;
+      }
+
+      .footer {
+        margin-top: 500px;
+        width: 100%;
+        height: 100px;
+        background-color: #e7eaef;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 500px) {
+        .pics {
+          width: 80%;
+          margin: 0 auto;
+        }
+        .pic1,
+        .pic2,
+        .pic3,
+        .pic4 {
+          margin: 2.5%;
+          width: 40%;
+          height: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">Reactive</div>
+
+      <div class="nav">
+        <ul>
+          <li>Welcome</li>
+          <li>Events</li>
+          <li>Pricing</li>
+          <li>Blog</li>
+          <li>External</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="maincontents">
+      <div class="events">
+        <hr />
+        <h1>Events</h1>
+        <hr />
+        <p>
+          Reactive is
+          <a href="#">free HTML5 template</a>
+          based on Bootstrap responsive framework. This
+        </p>
+        <div class="pics">
+          <div class="pic1"><img src="img/child1.jpg" alt="" /></div>
+
+          <div class="pic2"><img src="img/mountain.jpg" alt="" /></div>
+
+          <div class="pic3"><img src="img/child2.jpg" alt="" /></div>
+
+          <div class="pic4"><img src="img/mountain.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="footer">Copyright © 2084 Company Name</div>
+  </body>
+</html>

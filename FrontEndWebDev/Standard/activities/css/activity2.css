@@ -1,0 +1,25 @@
+div {
+  margin: 0 auto;
+  font-size: 100px;
+  /* width: 100%; */
+  text-align: center;
+}
+
+div::before {
+  content: "";
+  width: 550px;
+  height: 10px;
+  background-color: red;
+  display: block;
+  margin: 0 auto;
+}
+
+div::after {
+  content: "";
+  width: 550px;
+  height: 10px;
+  background-color: red;
+  display: block;
+  margin: 0 auto;
+}
+

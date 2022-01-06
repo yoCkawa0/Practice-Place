@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Activity</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        button{
+            width: 522px;
+            height: 50px;
+            float: left;
+        }
+        .content{
+            width: 500px;
+            display: flex;
+        }
+        img{
+            /* background-image: url("./images/avatar.png"); */
+            height: 200px;
+            width: 200px;
+        
+        }
+        div{
+            float: left;
+            height: auto;
+            width: 50%;
+            border: 1px solid black;
+            
+        }
+        .content , .text{
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".content").slideToggle(1000);
+            });
+
+            $(".pic").click(function(){
+                $("#avatar").hide();
+            });
+            
+            $(".text").click(function(){
+                $("#avatar").show();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button>Click Me!</button>
+    <br>
+    <div class="content">
+        <div class="pic">
+            <img src="./images/avatar.png" alt="" id="avatar">
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, laborum dolorum assumenda quas distinctio sequi! Hic exercitationem, rem obcaecati quo temporibus pariatur eos, suscipit modi eum expedita nesciunt sequi quasi!
+        </div>
+    </div>
+    
+
+</body>
+</html>

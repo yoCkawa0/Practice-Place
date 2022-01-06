@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 auto;
+      }
+      .container-flex {
+        width: 100%;
+      }
+      .header {
+        width: 100%;
+        border: 2px solid black;
+      }
+      .columns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .column {
+        width: 30%;
+      }
+      .no1 {
+        height: 200px;
+        background-color: aqua;
+      }
+
+      .no2 {
+        height: 200px;
+        background-color: salmon;
+      }
+
+      .no3 {
+        height: 200px;
+        background-color: lightgreen;
+      }
+
+      .footer {
+        width: 100%;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flex -->
+    <div class="container-flex">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+      <div class="columns">
+        <div class="column no1">No1</div>
+        <div class="column no2">No2</div>
+        <div class="column no3">No3</div>
+      </div>
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>

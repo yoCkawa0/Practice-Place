@@ -1,0 +1,61 @@
+#box {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  /* float: right; */
+  margin: 0;
+  margin: auto;
+}
+
+#box2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 0;
+  margin: auto;
+}
+
+#box3 {
+  width: 300px;
+  height: 300px;
+  background-color: violet;
+  padding: 30px;
+  box-sizing: border-box;
+  /* padding-left: 30px; */
+  /* float: left; */
+}
+#box3:hover {
+  background-color: green;
+  /* width: 200px;
+  height: 200px; */
+  padding: 60px;
+  cursor: pointer;
+  /* マウスカーソルを合わせたときにカーソルの表示を変更 */
+}
+
+#box4 {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  padding: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  /* float: right; */
+}
+
+h1 {
+  border: solid red 1px;
+  display: inline-block;
+  width: 400px;
+}
+
+h2 {
+  border: solid red 1px;
+  width: 200px;
+}
+
+label {
+  border: solid green 1px;
+  width: 400px;
+  display: block;
+}

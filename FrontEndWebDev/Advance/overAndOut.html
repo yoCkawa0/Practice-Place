@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverAndOut</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        function bgChange(bg){
+            document.body.style.background = bg;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="box1" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent');" style="background-color: antiquewhite;"></div>
+    <div class="box2" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent');" style="background-color: aquamarine;"></div>
+    <div class="box3" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent');" style="background-color: cadetblue;"></div>
+</body>
+
+</html>

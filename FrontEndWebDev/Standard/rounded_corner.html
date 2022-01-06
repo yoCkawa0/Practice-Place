@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      /* #box1 {
+        width: 100px;
+        height: 100px;
+        border: solid black 2px;
+        padding: 20px;
+        background-color: antiquewhite;
+        border-radius: 20px 10px 5px;
+      }
+
+      img {
+        width: 303px;
+        height: 300px;
+        border-radius: 90%;
+      }
+
+      p {
+        border-radius: 20px;
+        background-color: yellow;
+      } */
+
+      body {
+        margin: 0 auto;
+      }
+
+      form {
+        width: 500px;
+        background-color: white;
+        color: blue;
+        border: solid black 2px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      input[type="text"],
+      input[type="checkbox"] {
+        border: solid black 1px;
+        border-radius: 5px;
+      }
+
+      label {
+        display: block;
+      }
+
+      button {
+        color: white;
+        background-color: blue;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="box1">This is rounded corner.</div>
+    <br />
+    <img src="img/p1.jpg" alt="" />
+    <p>test text</p> -->
+
+    <form action="">
+      <label for="firstname">First Name</label>
+      <input type="text" id="firstname" required />
+      <label for="ml">M.L</label>
+      <input type="checkbox" id="ml" required />
+      <label for="lastname">Last Name</label>
+      <input type="text" id="lastname" required />
+      <br />
+      <label for="address">Street Address</label>
+      <input type="text" id="address" required />
+      <br />
+      <label for="city">City</label>
+      <input type="text" id="city" required />
+      <label for="state">State</label>
+      <input type="text" id="state" required />
+      <label for="zip">Zip</label>
+      <input type="text" id="zip" required />
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

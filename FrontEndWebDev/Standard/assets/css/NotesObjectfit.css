@@ -1,0 +1,30 @@
+img {
+  border: 2px solid black;
+  display: inline;
+}
+
+.fill {
+  object-fit: fill;
+}
+.contain {
+  object-fit: contain;
+}
+.cover {
+  object-fit: cover;
+}
+.scale-down {
+  object-fit: scale-down;
+}
+
+#imagepercentage {
+  width: 50%;
+  height: 400px;
+}
+#boxsizing {
+  width: 300px;
+  height: 300px;
+  border: solid 2px gray;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: justify;
+}

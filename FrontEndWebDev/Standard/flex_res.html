@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=ß, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .header {
+        color: white;
+      }
+
+      .title {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        background-color: aquamarine;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0;
+        padding-top: 125px;
+      }
+
+      .nav {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 54px;
+        background-color: black;
+      }
+
+      ul {
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: 15px;
+      }
+
+      li > a {
+        text-decoration: none;
+        color: white;
+      }
+      li:hover {
+        background-color: gray;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .sidebar {
+        width: 30%;
+        /* border: 1px solid blue; */
+        background-color: lightgray;
+      }
+
+      .main {
+        width: 70%;
+        /* border: 1px solid blue; */
+      }
+
+      img {
+        margin: 0 auto;
+        width: 90%;
+        height: 90%;
+        padding: 10px;
+      }
+
+      .footer {
+        height: 50px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: gray;
+      }
+      .footer > p {
+        margin: 0;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .nav {
+          display: block;
+          text-align: center;
+          /* background-color: black; */
+        }
+        /* li {
+          float: left;
+        } */
+
+        .sidebar {
+          width: 100%;
+        }
+        .main {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">
+        <h1>My Website</h1>
+        <p>With a flexible layout</p>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- sidebar area -->
+      <div class="sidebar">
+        <div class="about-me">
+          <h2>About Me</h2>
+          <p>Photo of me:</p>
+          <img src="img/p1.jpg" alt="" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, ipsa?
+          </p>
+        </div>
+
+        <div class="more-text">
+          <h2>More Text</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <img src="img/p1.jpg" alt="" />
+          <img src="img/p1.jpg" alt="" />
+          <img src="img/p1.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- main area -->
+      <div class="main">
+        <div class="title-heading box1">
+          <h2>TITLE HEADING</h2>
+          <p>Title description,Dec 7,2017</p>
+          <img src="img/p1.jpg" alt="" />
+          <p>Some text..</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ab,
+            illo delectus tenetur explicabo rem doloremque numquam ratione
+            necessitatibus perspiciatis esse sunt asperiores voluptatibus
+            repudiandae!
+          </p>
+        </div>
+
+        <div class="title-heading box2">
+          <h2>TITLE HEADING</h2>
+          <p>Title description,Dec 7,2017</p>
+          <img src="img/p1.jpg" alt="" />
+          <p>Some text..</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ab,
+            illo delectus tenetur explicabo rem doloremque numquam ratione
+            necessitatibus perspiciatis esse sunt asperiores voluptatibus
+            repudiandae!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- footer area -->
+    <div class="footer">
+      <p>footer</p>
+    </div>
+  </body>
+</html>

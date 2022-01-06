@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droppable</title>
+    <!-- <script src="./assets/js/jquery-3.5.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #ball{
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid black; */
+            float: left;
+            margin: 10px;
+        }
+        #basket{
+            width: 200px;
+            height: 200px;
+            top: 400px;
+            left: 400px;
+            position:absolute;
+            /* border: 1px solid red; */
+            /* float: left; */
+        }
+        img{
+            width: 100px;
+
+        }
+        p{
+            color: black;
+            font-size: 10px;
+        }
+
+
+    </style>
+
+    <script>
+        $(function(){
+            $('#ball').draggable();
+
+            $('#basket').droppable({
+                drop:function(event,ui){
+                    $(this).addClass("ui-state-highlight")
+                            .find("p")
+                                .html("Congratulation");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="ball">
+        <img src="./images/avatar.png" alt="" >
+    </div>
+    <div id="basket">
+        <p></p>
+        <img src="./images/goal.jpg" alt="" >
+    </div>
+</body>
+</html>

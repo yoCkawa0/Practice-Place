@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TABLE</title>
+  </head>
+  <body>
+    <table>
+      <th colspan="4">FRUITS</th>
+      <tr>
+        <td rowspan="2">
+          <div class="container"></div>
+          <!-- JAN -->
+        </td>
+        <td>MANGO</td>
+        <td>GRAPES</td>
+        <td>COCO</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>40</td>
+        <td>98</td>
+      </tr>
+
+      <tr>
+        <td>FEB</td>
+        <td rowspan="3">BANANA</td>
+        <td colspan="2" class="G">GREEN</td>
+      </tr>
+      <tr>
+        <td>MAR</td>
+        <td colspan="2" class="Y">YELLOW</td>
+      </tr>
+      <tr>
+        <td>APR</td>
+
+        <td colspan="2" class="O">ORANGE</td>
+      </tr>
+      <tr>
+        <td colspan="4">CALENDAR</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<style>
+  table,
+  th,
+  td,
+  tr {
+    border: solid black 3px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .G {
+    background-color: greenyellow;
+  }
+
+  .Y {
+    background-color: yellow;
+  }
+  .O {
+    background-color: orange;
+  }
+  .container {
+    height: 200px;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+  .container:after {
+    display: block;
+    content: "";
+    position: relative;
+    top: 25%;
+    left: 33%;
+    height: 100px;
+    width: 100px;
+    background-color: #ff0000;
+    border-radius: 100%;
+  }
+</style>

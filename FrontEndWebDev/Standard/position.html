@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.static {
+        position: static;
+        border: solid 2px black;
+      }
+      div.relative {
+        position: relative;
+        border: solid 2px black;
+        /* left: 50px; */
+        width: 400px;
+        height: 200px;
+      }
+
+      div.fixed {
+        position: fixed;
+        border: solid 2px black;
+        left: 50px;
+        bottom: 0px;
+        right: 0;
+        width: 50%;
+      }
+      div.sticky {
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background-color: antiquewhite;
+        border: solid 2px red;
+      }
+
+      div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: solid 2px red;
+      }
+    </style>
+  </head>
+  <body>
+    test
+    <div class="static">This is the static position.</div>
+
+    <div class="relative">This is the relative position.</div>
+
+    <div class="fixed">This is the fixed position.</div>
+
+    <div class="sticky">This is the sticky position.</div>
+
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo
+      soluta minus, voluptatibus consectetur saepe, eveniet qui libero
+      consequuntur at necessitatibus ducimus dicta velit. Ad non mollitia
+      tempora, quasi cumque dicta ut aspernatur aliquid explicabo cum id,
+      adipisci sint distinctio eum odit quibusdam dignissimos quia maiores, ab
+      corporis eius praesentium accusamus! Dolor voluptatum earum dolore fugiat
+      dicta adipisci quae non voluptas nam quo deserunt obcaecati, quisquam
+      cumque nulla aut inventore. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Ab temporibus odit rem quas cum sint. In veritatis
+      impedit, quae incidunt autem illum earum laboriosam eius sunt magni nisi
+      voluptates fugit ipsum nesciunt delectus aut exercitationem dolorem
+      aliquam similique deleniti alias minus! Officiis optio ab dicta, cum iste
+      eveniet nemo deleniti aspernatur, quo ut, quod ullam alias praesentium
+      fugiat adipisci dignissimos! Rerum hic temporibus quod natus dolore
+      mollitia, rem ratione voluptatum nam unde, id repellat accusantium
+      voluptas laboriosam. Nesciunt, facere nam quos ducimus sequi a hic,
+      impedit magni autem assumenda quasi accusantium? Voluptatibus rerum amet
+      eveniet dolores minima voluptatem quidem sed.
+    </div>
+
+    <div class="relative">
+      relative
+      <div class="absolute">absolute</div>
+    </div>
+    test1
+  </body>
+</html>

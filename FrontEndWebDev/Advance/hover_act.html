@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover-act</title>
+</head>
+<style>
+    .header{
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+    }
+    ul{
+        list-style: none;
+        text-align: center;
+        color: white;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    li{
+        float: left;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="header">
+        <ul>
+            <!-- <a href="https://www.google.com/"></a>
+            <a href="https://www.yahoo.com/"></a>
+            <a href="https://www.instagram.com/"></a>
+            <a href="https://www.facebook.com/"></a> -->
+            <li onmouseover="onhover(this);" onmouseout="outhover(this);" onclick="movesite(id)" id="google">HOME</li>
+            <li onmouseover="onhover(this);" onmouseout="outhover(this);" onclick="movesite(id)" id="yahoo" >ABOUT ME</li>
+            <li onmouseover="onhover(this);" onmouseout="outhover(this);" onclick="movesite(id)" id="instagram">CONTACT ME</li>
+            <li onmouseover="onhover(this);" onmouseout="outhover(this);" onclick="movesite(id)" id="facebook">GALLERY</li>
+        </ul>
+    </div>
+
+    <script>
+        function onhover(val){
+            val.style.backgroundColor = "yellow";
+            val.style.fontSize = "25px"
+            val.style.color = "black"
+            
+        }
+        function outhover(val){
+            val.style.backgroundColor = "transparent";
+            val.style.fontSize = "18px"
+            val.style.color = "white"
+        }
+
+        function movesite(id){
+            // var i = document.getElementById("");
+            if(id == "google"){
+                // var x = document.getElementById("site").value;
+                window.location = "https://www.google.com/";
+                // document.getElementById("site").innerHTML = "<a href=>"+x+"</a>";
+                // i = 0;
+            }
+            else if (id == "yahoo"){
+                window.location = "https://www.yahoo.com/";
+            }
+            else if (id == "facebook"){
+                window.location = "https://www.facebook.com/";
+            }
+            else if (id == "instagram"){
+                window.location = "https://www.instagram.com/";
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

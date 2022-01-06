@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+</head>
+<body>
+    
+    <!-- <p>Hello world!</p>
+    <p>Hello world two!</p>
+    <p>Hello world three!</p>
+    <script>
+        
+        document.getElementsByTagName("p")[0].innerHTML = "Robot1";
+        document.getElementsByTagName("p")[1].innerHTML = "Robot2";
+        document.getElementsByTagName("p")[2].innerHTML = "Robot3";
+        // document.getElementsByTagName("p")[0];
+        // document.getElementsByTagName("p")[1];
+        // document.getElementsByTagName("p")[2];
+    </script> -->
+    <h1>Firstname</h1>
+    <h1>Lastname</h1>
+    <h2>Age</h2>
+
+    <p>Hello world!</p>
+    <p>Hello world two!</p>
+    <p>Hello world three!</p>
+
+
+    <h3 id="address">Address</h3>
+    <div id="content"></div>
+    <img src="images/photo3.png" alt="" id="favoriteImg" />
+    <button id="submitForm">
+        Submit Form
+    </button>
+    <!-- <img src="./images/photo2.jpg" alt="" id="favoriteImg"> -->
+
+    <!-- <script>
+        document.getElementsByTagName("h1")[0].innerHTML = "Yoshikatsu";
+        document.getElementsByTagName("h1")[1].innerHTML = "Hayakawa";
+        document.getElementsByTagName("h2")[0].innerHTML = "21";
+    </script> -->
+
+
+    <script>
+        document.getElementsByTagName("p")[0].innerHTML = "Robot1";
+        document.getElementsByTagName("p")[1].innerHTML = "Robot2";
+        document.getElementsByTagName("p")[2].innerHTML = "Robot3";
+        var addressElement = document.getElementById("address");
+        addressElement.innerHTML = "China";
+
+        document.getElementById("content").innerHTML = "Hello I'm Yoshi";
+
+        document.getElementById("favoriteImg").src = "./images/photo3.png"
+        document.getElementById("submitForm").addEventListener("click",function(){
+            // alert(1);
+            console.log("hello world");
+            document.getElementsByTagName("p")[2].innerHTML = "Robot4";
+        });
+    </script>
+</body>
+</html>

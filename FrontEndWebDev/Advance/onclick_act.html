@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick-act</title>
+    <style>
+        .big img{
+            width: 500px;
+            height: 500px;
+        }
+
+        .big > #pic2,#pic3{
+            display: none;
+        }
+
+        .small > img{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="big">
+        <img src="images/p1.jpg" alt="" id="pic1" >
+        <img src="images/p2.jpg" alt="" id="pic2" >
+        <img src="images/p3.jpg" alt="" id="pic3" >
+          
+    </div>
+    <div class="small">
+        <img src="images/p1.jpg" alt="" onclick="exchangeImg()" id="1" value="1" class="pic">
+        <img src="images/p2.jpg" alt="" onclick="exchangeImg()" id="2" value="2" class="pic">
+        <img src="images/p3.jpg" alt="" onclick="exchangeImg()" id="3" value="3" class="pic">
+        
+    </div>
+    <script>
+            function exchangeImg(){
+                // var i = document.getElementsByClassName("pic").id;
+                // console.log(i);
+
+                if(document.getElementById("1").value == "1"){
+                    document.getElementById("pic1").style.display = "block";
+                    document.getElementById("pic2").style.display = "none";
+                    document.getElementById("pic3").style.display = "none";
+                }else if(document.getElementById("2").value == "2"){
+                    document.getElementById("pic1").style.display = "none";
+                    document.getElementById("pic2").style.display = "block";
+                    document.getElementById("pic3").style.display = "none";
+                }else if(i == 3){
+                    document.getElementById("pic1").style.display = "none";
+                    document.getElementById("pic2").style.display = "none";
+                    document.getElementById("pic3").style.display = "block";
+                }
+            };
+    </script>
+    
+    
+</body>
+</html>

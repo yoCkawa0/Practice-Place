@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 03 - Function and Inputs</title>
+</head>
+<body>
+
+    <input type="text" id="firstNumber1" > + <input type="text" id="secondNumber1"><button onclick="cal()" value="+">add</button><p> add result : </p><br>
+    <input type="text" id="firstNumber2" > * <input type="text" id="secondNumber2"><button onclick="cal()" value="*">mult</button><p> mult result : </p><br>
+    <input type="text" id="firstNumber3" > / <input type="text" id="secondNumber3"><button onclick="cal()" value="/">div</button><p> div result : </p><br>
+    <input type="text" id="firstNumber4" > - <input type="text" id="secondNumber4"><button onclick="cal()" value="-">minus</button><p> minus result : </p><br>
+    
+    <hr>
+
+    <input type="text" id="firstNumber1" > + <input type="text" id="secondNumber1"><button onclick="cal()" value="+">add</button><p> add result : </p><br>
+    <input type="text" id="firstNumber2" > * <input type="text" id="secondNumber2"><button onclick="cal()" value="*">mult</button><p> mult result : </p><br>
+    <input type="text" id="firstNumber3" > / <input type="text" id="secondNumber3"><button onclick="cal()" value="/">div</button><p> div result : </p><br>
+    <input type="text" id="firstNumber4" > - <input type="text" id="secondNumber4"><button onclick="cal()" value="-">minus</button><p> minus result : </p><br>
+    
+
+
+
+
+    <script>
+
+        var result = 0;
+
+        function cal(){
+            if(value = "+"){
+                var firstNumber = document.getElementById("firstNumber1").value;
+                var secondNumber = document.getElementById("secondNumber1").value;
+                var result = parseInt(firstNumber) + parseInt(secondNumber);
+                document.getElementsByTagName("p")[0].innerHTML = "result : " + result;
+            }
+            else if(value = "*"){
+                var firstNumber = document.getElementById("firstNumber2").value;
+                var secondNumber = document.getElementById("secondNumber2").value;
+                var result = parseInt(firstNumber) * parseInt(secondNumber);
+                document.getElementsByTagName("p")[1].innerHTML = "result : " + result;
+            }
+            else if(value = "/"){
+                var firstNumber = document.getElementById("firstNumber3").value;
+                var secondNumber = document.getElementById("secondNumber3").value;
+                var result = parseInt(firstNumber) / parseInt(secondNumber);
+                document.getElementsByTagName("p")[2].innerHTML = "result : " + result;
+            }
+            else{
+                var firstNumber = document.getElementById("firstNumber4").value;
+                var secondNumber = document.getElementById("secondNumber4").value;
+                var result = parseInt(firstNumber) - parseInt(secondNumber);
+                document.getElementsByTagName("p")[3].innerHTML = "result : " + result;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

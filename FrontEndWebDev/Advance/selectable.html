@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectable</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        #select{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+        #select li{
+            margin: 3px;
+            padding: 10px;
+            font-size: 20px;
+            height: 20px;
+        }
+        #select .ui-selected{
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $('#select').selectable();
+            // $('#tbl').selectable();
+        }); 
+    </script>
+</head>
+<body>
+    <ul id="select">
+        <li class="ui-widget-content">Item 1</li>
+        <li class="ui-widget-content">Item 2</li>
+        <li class="ui-widget-content">Item 3</li>
+        <li class="ui-widget-content">Item 4</li>
+        <li class="ui-widget-content">Item 5</li>
+    </ul>
+    <!-- <table id="tbl">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr> -->
+
+    </table>
+</body>
+</html>

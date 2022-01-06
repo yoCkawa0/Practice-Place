@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overAndOutPic</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/p1.jpg" id="pic1" alt="" onmouseover="bigImage(this);" onmouseout="smallImage(this);">
+    <img src="images/p2.jpg" id="pic2" alt="" onmouseover="bigImage(this);" onmouseout="smallImage(this);">
+
+    <script>
+        function bigImage(val){
+            val.style.width = "200px";
+            val.style.height = "200px";
+            // i = this.id;
+            // console.log(i);
+        }
+        function smallImage(val){
+            val.style.width = "100px";
+            val.style.height = "100px";
+        }
+
+    </script>
+</body>
+</html>

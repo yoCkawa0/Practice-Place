@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <input type="text" onkeydown="handleOnKeyDown()" onkeyup="handleOnKeyUp()" id="test">
+    <script>
+        function handleOnKeyDown(){
+            console.log("Hello this is the keydown.");
+            document.getElementById("test").style.backgroundColor = "red";
+        }
+        function handleOnKeyUp(){
+            console.log("Hello this is the keyup");
+            document.getElementById("test").style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <title>day3 activity</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .mainbox {
+        width: 100%;
+        height: 800px;
+        background-image: url("img/day3_act.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 25%;
+      }
+
+      .signin {
+        border: solid black 2px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        opacity: 0.7;
+        margin: 0 auto;
+        /* margin: ; */
+        width: 50%;
+        height: 50%;
+      }
+      .sns {
+        width: 80%;
+        height: 10%;
+        margin: 0 auto;
+      }
+      .facebook,
+      .google {
+        /* margin: 0 auto; */
+        border: solid white 1px;
+        margin-top: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 25%;
+        float: left;
+      }
+      .facebook:hover {
+        background-color: blue;
+      }
+      .google:hover {
+        background-color: red;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+      i {
+        padding-right: 10px;
+      }
+
+      form {
+        width: 100%;
+      }
+      input:nth-child(1),
+      input:nth-child(2) {
+        width: 80%;
+        height: 25px;
+        margin-top: 5px;
+        background-color: lightslategray;
+      }
+      input:nth-child(3) {
+        float: left;
+      }
+
+      input:focus {
+        background-color: lightgreen;
+      }
+      label:nth-child(1) {
+        float: left;
+        display: block;
+      }
+      label:nth-child(2) {
+        margin-top: 100px;
+        float: right;
+      }
+
+      button {
+        margin-top: 5%;
+        width: 80%;
+        height: 50px;
+        background-color: lightgreen;
+      }
+
+      button:hover {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainbox">
+      <div class="signin">
+        <h2>Sign In</h2>
+        <p>Swiftly Sign in With</p>
+        <div class="sns">
+          <div class="facebook">
+            <i class="fab fa-facebook-square"></i>Facebook
+          </div>
+          <div class="google"><i class="fab fa-google-plus-g"></i>Google</div>
+        </div>
+        <p>Or Use Your Email</p>
+        <form action="">
+          <input type="text" placeholder="Email" required />
+          <!-- <br /> -->
+          <input type="password" placeholder="Password" required />
+          <br />
+          <input type="checkbox" id="remember" required />
+
+          <label for="remember">Remember Me</label>
+          <!-- <label for="forgot">forgot Password</label> -->
+          <br />
+          <button>Sign In</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

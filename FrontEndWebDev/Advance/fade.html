@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    
+    <style>
+        #box1{
+            background-color: blue;
+        }
+        #box2{
+            background-color: pink;
+        }
+        #box3{
+            background-color: yellow;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+            $("#fIn").click(function(){
+                $("#box1").fadeIn();
+                $("#box2").fadeIn("slow");
+                $("#box3").fadeIn(3500);
+            });
+
+            $("#fOut").click(function(){
+                $("#box1").fadeOut();
+                $("#box2").fadeOut("slow");
+                $("#box3").fadeOut(3500);
+            });
+
+            $("#fToggle").click(function(){
+                $("#box1").fadeToggle();
+                $("#box2").fadeToggle("slow");
+                $("#box3").fadeToggle(3500);
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <button id="fIn">Click Me! (fade In)</button>
+    <button id="fOut">Click Me! (fade Out)</button>
+    <button id="fToggle">Click Me! (fade Toggle)</button>
+
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+</body>
+</html>

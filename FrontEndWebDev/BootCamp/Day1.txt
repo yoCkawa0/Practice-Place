@@ -1,0 +1,26 @@
+HTML Attribute
+<p class="paragraph" ></p>
+
+
+HTML
+<p></p>
+<strong></strong>
+<i></>
+<hr> - creating a horizontal line
+<br> - creating a new line 
+<h1></h1> - the smaller the number the bigger is the text *h1-h6
+<a href="URL/Link"></a>
+<ul> -unorderd list
+	<li></li> - list
+</ul>
+<ol> - ordered list
+	<li></li> - list
+</ol>
+ol types (i,I,a,A) Attributes (type="I" , start="10")
+<img src="URL/file source"> - can put image on your website (width="value" height="value")
+
+<Form action="URL" method="POST"> - use to submit information from user input
+</Form>
+<input> - it has no end tag and it is use to ask input from your users
+TYPES OF INPUT (text,password,submit,date,number,email,checkbox)
+INPUT ATTRIBUTES (type,name)

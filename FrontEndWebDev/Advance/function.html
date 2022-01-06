@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <button id="calculate-add">Calculate addition</button>
+    <button id="calculate-minus">Calculate minus</button>
+
+    <button onclick="divide()">Calculate division</button>
+    <script>
+        function divide(){
+            var firstNumber = 20;
+            var secondNumber = 21;
+
+            console.log(firstNumber / secondNumber);
+        }
+
+        function add(firstNumber , secondNumber){
+            // var firstNumber = 20;
+            // var secondNumber = 21;
+            return firstNumber + secondNumber
+        }
+
+        function minus(firstNumber , secondNumber){
+            var firstNumber = 20;
+            var secondNumber = 21;
+            return firstNumber - secondNumber;
+        }
+
+        document.getElementById("calculate-add").addEventListener("click",function(){
+            // console.log("Worked!");
+            // console.log(firstNumber + secondNumber);
+            console.log(add(20,21));
+
+        });
+        document.getElementById("calculate-minus").addEventListener("click",function(){
+            console.log(minus(30,31));
+
+        });
+    </script>
+</body>
+</html>

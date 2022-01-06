@@ -1,0 +1,88 @@
+*{
+   font-family: 'Montserrat', sans-serif; 
+}
+
+.external{
+    color: tomato;
+}
+
+.font-size{
+    /* font-size is to change the size of the text */
+    /* font-size can use % or px */
+
+    font-size: 200%;
+}
+
+.font-weight{
+    /* font-weight is to change the thickness of the text */
+    /* font-weight can use 100 to 900 or it can use bold */
+
+    font-weight: bold;
+}
+
+.font-style{
+    /* font-style has 3 options: normal, italic, oblique */
+
+    font-style: italic;
+}
+
+/* text-transform has 3 values: uppercase, lowercase,capitalize */
+
+.uppercase{
+    /* uppercase ~~~ will tranform all texts into big letters */
+    text-transform: uppercase;
+}
+
+.lowercase{
+    /* lowercase ~~~ will transform all texts into small letters */
+    text-transform: lowercase;
+}
+
+.capitalize{
+    /* capitalize ~~~ will transfrom all first letters into big letters */
+    text-transform: capitalize;
+}
+
+/* text decoration has 4 values: none, underline, overline, line-through */
+
+.none{
+    text-decoration: none;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.overline{
+    text-decoration: overline;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+/* text-align has 3 value: left, center, right */
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.letter-spacing{
+    /* letter-spacing ~~~ adds spacing in between the letters of your text */
+
+    letter-spacing: 30px;
+}
+
+.word-spacing{
+    /* word-spacing ~~~ adds spacing in between the words of your text */
+
+    word-spacing: 20px;
+}

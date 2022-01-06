@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      /* body {
+        display: flex;
+      }
+ */
+      /* div {
+        background-color: pink;
+      }
+ */
+      /* @media (orientation: landscape;) {
+        body {
+          flex-direction: row;
+        }
+      } */
+
+      /* @media (min-resolution: 72dpi) {
+        div {
+          background-color: yellow;
+        }
+      }
+
+      @media (max-resolution: 300dpi) {
+        div {
+          background-color: lightblue;
+        }
+      } */
+
+      #box1 {
+        background-color: yellow;
+      }
+      @media screen and (max-width: 500px) {
+        #box1 {
+          background-color: pink;
+        }
+        h1 {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #box2 {
+          padding: 20px;
+          margin-top: 10px;
+          border: 1px solid black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">
+      <h1>Test message</h1>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+    <div id="box2">This is second div</div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Activity 02</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <p>Hide me on double click!</p>
+    <p>Hide me on click!</p>
+    <p>Hide me on hover!</p>
+    <br>
+    <br>
+    <button id="showall">Show all P elements</button>
+    <button id="addcolor">Add color to all P elements</button>
+    <br>
+    <input type="text">
+    <span>The text input value</span>
+    <!-- 
+        change the border of the input when focus and blur
+        when changing the input text it will display inside span
+     -->
+     <br>
+    <button id="clear">Clear input and span value/text</button>
+    <script>
+        var textvalue = 0;
+        // var defvalue = 0;
+        $(document).ready(function(){
+            $('p:nth-child(1)').dblclick(function(){
+                $(this).hide();
+            });
+
+            $('p:nth-child(2)').click(function(){
+                $(this).hide();
+            });
+            $('p:nth-child(3)').hover(function(){
+                $(this).hide();
+            });
+            $('#showall').click(function(){
+                $('p').show();
+                // alert(100);
+            });
+
+            $('#addcolor').click(function(){
+                $('p:nth-child(1)').css({color:'red'});
+                $('p:nth-child(2)').css({color:'blue'});
+                $('p:nth-child(3)').css({color:'green'});
+            });
+
+            $('input').on({
+            focus: function(){
+                $(this).css({ border:"solid 5px red"});
+            },
+            blur: function(){
+                $(this).css({ border:"solid 5px green"});
+            }});
+            
+            $('input').on({
+                input:function(){
+                    textvalue = $("input").val();
+                    defvalue = $('span').val();
+                    console.log(textvalue);
+                    $('span').text(textvalue);
+                }
+            });
+            $('#clear').click(function(){
+                $('span').text(defvalue);
+                $('input').val("");
+                $('input').css({ border:"solid 1px black"});
+            });
+
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

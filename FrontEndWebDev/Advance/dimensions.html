@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensions</title>
+    <script src="./assets/js/jquery-3.5.1.js"></script>
+    <style>
+        #box1{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $('button').click(function(){
+                var a = "";
+                a += "Width" + $("#box1").width() + "<br>";
+                a += "Height" + $("#box1").height() + "<br>";
+                a += "Inner Width" + $("#box1").innerWidth() + "<br>";
+                a += "Inner Height" + $("#box1").innerHeight() + "<br>";
+                a += "Outer Width" + $("#box1").outerWidth() + "<br>";
+                a += "Outer Height" + $("#box1").outerHeight() + "<br>";
+
+                $("#box1").html(a);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    <!-- <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div> -->
+    <button>Display Dimensions</button>
+</body>
+</html>

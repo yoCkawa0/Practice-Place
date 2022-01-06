@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 01 - Elements and Events</title>
+</head>
+<body>
+    <p>Firstname : </p>
+    <p>Lastname : </p>
+    <p>Age : </p>
+
+    <img src="images/photo3.png" alt="" id="favoriteImg">
+    <button id="change">Change Image</button>
+    <button id="reset">Reset</button>
+    
+
+    <script>
+        document.getElementsByTagName("p")[0].innerHTML =  "Firstname : Yoshikatsu";
+        document.getElementsByTagName("p")[1].innerHTML = "Lastname : Hayakawa";
+        document.getElementsByTagName("p")[2].innerHTML = "Age : 21";
+        document.getElementById("change").addEventListener("click",function(){
+            
+            document.getElementById("favoriteImg").src = "./images/photo4.png"
+            // document.getElementsByTagName("p")[2].innerHTML = "Robot4";
+        });
+
+        document.getElementById("reset").addEventListener("click",function(){
+            document.getElementsByTagName("p")[0].innerHTML =  "Firstname : ";
+            document.getElementsByTagName("p")[1].innerHTML = "Lastname : ";
+            document.getElementsByTagName("p")[2].innerHTML = "Age : ";
+            // document.getElementsByTagName("p")[2].innerHTML = "Robot4";
+        });
+
+
+
+    </script>
+
+    
+
+
+</body>
+</html>

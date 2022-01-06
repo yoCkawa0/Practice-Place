@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGSITRATION page</title>
+  </head>
+  <body>
+    <h1>REGSITRATION</h1>
+
+    <form action="saveprofile.php" method="POST">
+      <p>
+        <input type="text" name="fullname" placeholder="ENTER FULLNAME" /><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="ENTER PASSWORD"
+        /><br />
+        <input type="date" name="birthday" placeholder="ENTER BIRTHDAY" /><br />
+        <!-- <input type="text" name="birthday" placeholder="ENTER BIRTHDAY" /><br /> -->
+
+        <select>
+          <option value="">SELECT A SKILL</option>
+          <option value="">HTML CORDING</option>
+          <option value="">PHP</option>
+          <option value="">PROGRAMMING</option>
+          <option value="">DESIGN</option>
+        </select>
+        <br />
+        <input type="submit" value="SUBMIT" /><br />
+      </p>
+    </form>
+  </body>
+</html>
